@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- ===== VERSION 1: CON CODIGO (Mercado Libre y WhatsApp) ===== -->
+<!-- ===== VERSION 2: SIN CODIGO, PAGO UNICO (Hotmart) ===== -->
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -8,6 +8,7 @@
 <meta name="description" content="Vida Plena: herramientas sencillas para organizar el bienestar, la memoria, los hábitos y las consultas médicas.">
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png">
 <title>Vida Plena · Tu bienestar, a tu ritmo</title>
+<meta name="vp-version" content="CON CODIGO - Mercado Libre y WhatsApp">
 <style>
 :root{--ink:#183a37;--muted:#5d716d;--paper:#f6f4ed;--surface:#fffefa;--line:#e0e6dc;--teal:#174b46;--teal2:#246b61;--mint:#e6f3ec;--coral:#e8a17d;--gold:#f0c66e;--sky:#e8f1f6;--lav:#f0ebf8;--danger:#8b302b;--dangerbg:#fff0ee;--shadow:0 12px 34px rgba(29,65,57,.08);--radius:22px;--font:21px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:var(--font)/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.005em}body.dark{--ink:#edf4ef;--muted:#c2d0c8;--paper:#101c1a;--surface:#1b2b28;--line:#354743;--teal:#96d8c8;--teal2:#9ae0cf;--mint:#233d36;--coral:#edb08e;--gold:#edce8a;--sky:#24383e;--lav:#352f42;--danger:#ffb2a8;--dangerbg:#442523;--shadow:0 12px 34px rgba(0,0,0,.2)}
@@ -20,7 +21,7 @@ main{min-width:0}.topbar{display:flex;justify-content:space-between;align-items:
 .formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:grid;gap:6px;min-width:0}.field label{font-size:15px;font-weight:800}.field input,.field select,.field textarea{width:100%;min-height:50px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:11px 13px;font-size:16px}.field textarea{min-height:104px;resize:vertical}.field.full{grid-column:1/-1}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.subhead{font-size:17px;margin:0 0 11px}.empty{border:1px dashed var(--line);background:var(--paper);border-radius:16px;padding:20px;text-align:center;color:var(--muted);font-size:15px}.entries{display:grid;gap:10px;margin-top:15px}.entry{border:1px solid var(--line);border-radius:15px;padding:14px;background:var(--surface);display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.entry strong{display:block;font-size:16px}.entry .meta{font-size:14px;color:var(--muted);margin-top:3px}.entry .delete{border:1px solid var(--line);background:var(--paper);color:var(--danger);border-radius:10px;min-width:38px;min-height:38px;font-weight:900}.entry-main{min-width:0}.entry p{margin:6px 0 0;color:var(--muted);font-size:15px;white-space:pre-wrap;overflow-wrap:anywhere}
 .gamebar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.gamebar button{border-radius:99px;border:1px solid var(--line);padding:9px 15px;background:var(--surface);color:var(--ink);font-weight:800}.gamebar button.active{background:var(--teal);border-color:var(--teal);color:white}.game-grid{display:grid;grid-template-columns:repeat(4,minmax(52px,1fr));gap:10px;max-width:520px;margin:18px auto}.game-card{aspect-ratio:1/1;border-radius:17px;border:2px solid var(--line);background:var(--mint);color:var(--ink);font-size:clamp(24px,5vw,39px);font-weight:800;display:grid;place-items:center;box-shadow:0 3px 0 rgba(20,50,43,.04)}.game-card.revealed{background:var(--surface);border-color:var(--teal2)}.game-card.matched{background:#e5f5dc;border-color:#76a765}.dark .game-card.matched{background:#25432b}.game-message{min-height:28px;text-align:center;color:var(--teal2);font-weight:800}.word-list{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin:18px 0}.word-chip{border-radius:12px;background:var(--mint);padding:10px 14px;font-size:18px;font-weight:800}.breathe{width:158px;height:158px;border-radius:50%;margin:18px auto;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,var(--surface) 53%,var(--mint) 55%);border:2px solid var(--teal2);color:var(--teal2);font-size:19px;font-weight:800}.exercise{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}.exercise:last-child{border:0}.exercise .stepno{width:39px;height:39px;flex-shrink:0;display:grid;place-items:center;border-radius:13px;background:var(--mint);font-weight:900}.exercise h5{font-size:16px;margin:0 0 3px}.exercise p{margin:0;color:var(--muted);font-size:15px}.faqitem{border:1px solid var(--line);border-radius:15px;background:var(--surface);margin:9px 0;overflow:hidden}.faqitem summary{padding:15px 17px;cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:12px}.faqitem summary:after{content:'＋';color:var(--teal2);font-weight:900}.faqitem[open] summary:after{content:'−'}.faqitem .answer{padding:0 17px 17px;color:var(--muted);font-size:16px}.faqitem .answer ul{padding-left:22px}.faqitem .answer a{color:var(--teal2);font-weight:700}.searchbox{position:relative;margin-bottom:14px}.searchbox input{width:100%;min-height:53px;border:1px solid var(--line);border-radius:14px;padding:12px 15px;background:var(--surface);color:var(--ink)}.contact-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.footer{padding:26px 0 0;color:var(--muted);font-size:13px;line-height:1.5}.mobile-nav{display:none}.toast{position:fixed;z-index:30;bottom:25px;left:50%;transform:translateX(-50%);max-width:min(92vw,600px);background:var(--teal);color:#fff;padding:13px 19px;border-radius:15px;box-shadow:var(--shadow);font-weight:750;font-size:15px;display:none}.toast.show{display:block;animation:fade .2s}
 @media(max-width:1120px){.shell{grid-template-columns:220px minmax(0,1fr);gap:17px;padding:16px}.sidebar{padding:17px 10px}.grid.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.brand h1{font-size:20px}.nav button{padding:11px;font-size:14px}}
-@media(max-width:780px){:root{--font:18px}.shell{display:block;padding:13px 13px 95px}.sidebar{display:none}.topbar{align-items:flex-start}.tools{max-width:48%}.topbar h2{font-size:25px}.crumb{font-size:12px}.iconbtn{min-height:43px;min-width:42px;padding:6px 9px}.iconbtn.textbtn{font-size:12px}.hero{border-radius:23px;padding:25px 22px}.hero h3{font-size:32px}.hero p{font-size:17px}.grid.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid.two{grid-template-columns:1fr}.card{padding:16px;border-radius:18px}.card .card-ico{width:42px;height:42px;margin-bottom:12px}.card h4{font-size:17px}.card p{font-size:15px}.section-head h3{font-size:21px}.section-head{align-items:flex-start}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom));gap:2px;justify-content:space-around;box-shadow:0 -6px 24px rgba(20,60,48,.08)}.mobile-nav button{display:grid;justify-items:center;align-content:center;gap:1px;border:0;background:transparent;color:var(--muted);font-size:11px;font-weight:800;border-radius:12px;padding:5px 3px;min-width:0;flex:1}.mobile-nav button span{font-size:20px;line-height:1.25}.mobile-nav button.active{background:var(--mint);color:var(--teal)}.footer{padding-bottom:10px}.entry{padding:12px}.hero-actions .btn{flex:1}.section-head .btn{white-space:nowrap}.game-grid{gap:7px}.game-card{border-radius:13px}.breathe{width:145px;height:145px}}
+@media(max-width:780px){:root{--font:18px}.shell{display:block;padding:13px 13px 95px}.sidebar{display:none}.topbar{align-items:flex-start}.tools{max-width:48%}.topbar h2{font-size:25px}.crumb{font-size:12px}.iconbtn{min-height:43px;min-width:42px;padding:6px 9px}.iconbtn.textbtn{font-size:12px}.hero{border-radius:23px;padding:25px 22px}.hero h3{font-size:32px}.hero p{font-size:17px}.grid.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid.two{grid-template-columns:1fr}.card{padding:16px;border-radius:18px}.card .card-ico{width:42px;height:42px;margin-bottom:12px}.card h4{font-size:17px}.card p{font-size:15px}.section-head h3{font-size:21px}.section-head{align-items:flex-start}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom));gap:2px;justify-content:space-around;box-shadow:0 -6px 24px rgba(20,60,48,.08)}.mobile-nav button{display:grid;justify-items:center;align-content:center;gap:1px;border:0;background:transparent;color:var(--muted);font-size:12.5px;white-space:nowrap;font-weight:800;border-radius:12px;padding:5px 3px;min-width:0;flex:1}.mobile-nav button span{font-size:23px;line-height:1.2}.mobile-nav button.active{background:var(--mint);color:var(--teal)}.footer{padding-bottom:10px}.entry{padding:12px}.hero-actions .btn{flex:1}.section-head .btn{white-space:nowrap}.game-grid{gap:7px}.game-card{border-radius:13px}.breathe{width:145px;height:145px}}
 @media(max-width:390px){.grid.cards{grid-template-columns:1fr}.topbar{display:block}.tools{max-width:none;justify-content:flex-start;margin-top:12px}.hero h3{font-size:29px}.topbar h2{font-size:24px}}
 @media print{body{background:white;color:#111}.shell{display:block;padding:0}.sidebar,.mobile-nav,.topbar .tools,.actions,.delete,.btn,.gamebar{display:none!important}.view{display:none!important}.view.active{display:block!important}.card,.hero{box-shadow:none;break-inside:avoid}.hero{background:white;color:#111;border:1px solid #aaa}.hero p,.eyebrow{color:#333}.card{border:1px solid #ccc}.notice{border:1px solid #aaa}a{color:#111}.footer{color:#444}}
 
@@ -28,11 +29,68 @@ main{min-width:0}.topbar{display:flex;justify-content:space-between;align-items:
 .vp-box{max-width:520px;width:100%;text-align:center}.vp-box h1{font-size:2rem;line-height:1.15;margin:.3em 0}.vp-box p{font-size:1.1rem}
 .vp-box .btn{width:100%;margin:8px 0;min-height:62px;font-size:1.15rem}
 .vp-box input{width:100%;padding:16px;border-radius:14px;border:0;font-size:1.3rem;text-align:center;margin:10px 0;text-transform:uppercase}
+.vp-box input[type=checkbox],.vp-box input[type=radio]{width:28px;height:28px;flex:none;margin:0;padding:0;accent-color:#174b46;text-transform:none}
 .vp-ben{background:#ffffff1f;border-radius:16px;padding:14px;margin:14px 0;font-size:1.05rem;line-height:1.7}
 .vp-pb{background:var(--mint);border-radius:18px;padding:16px;text-align:center;margin:12px 0}
 .vp-big{font-size:3.6rem;font-weight:800;color:var(--teal)}
 .vp-sel{border:1px solid var(--line);border-radius:14px;min-height:46px;padding:6px 12px;background:var(--surface);color:var(--ink);font-weight:750}
 .vp-q{display:block;width:100%;margin:8px 0}
+
+/* Vida Plena Premium: módulo de bienestar guiado, sin alterar las funciones existentes */
+.vp-meditation-wrap{margin-top:16px}
+.vp-meditation-hero{background:linear-gradient(120deg,#174b46,#347d6d);color:#fff;border-radius:24px;padding:24px;margin-bottom:16px}
+.vp-meditation-hero h3{font-size:clamp(25px,3vw,34px);line-height:1.15;margin:8px 0}
+.vp-meditation-hero p{color:#e6f4ea;margin:0}
+.vp-meditation-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.vp-meditation-controls label{display:grid;gap:6px;font-weight:800;font-size:15px}
+.vp-meditation-controls select{min-height:48px;border:1px solid var(--line);border-radius:12px;padding:10px;background:var(--surface);color:var(--ink);font:inherit}
+.vp-meditation-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.vp-meditation-item{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px}
+.vp-meditation-item h4{margin:0 0 7px;font-size:19px}
+.vp-meditation-item p{margin:0;color:var(--muted);font-size:16px}
+.vp-meditation-player{margin-top:14px;padding:18px;border-radius:18px;background:var(--mint);border:1px solid var(--line)}
+.vp-meditation-player p{font-size:18px;line-height:1.75;white-space:pre-line}
+.vp-meditation-progress{height:8px;background:var(--line);border-radius:20px;overflow:hidden}
+.vp-meditation-progress span{display:block;height:100%;width:0;background:var(--teal2);transition:width .2s}
+@media(max-width:600px){.vp-meditation-controls,.vp-meditation-list{grid-template-columns:1fr}}
+
+
+/* Vida Plena Premium Plus — ampliaciones accesibles y adaptables */
+.vp-feature-hero{background:linear-gradient(120deg,#174b46,#347d6d);color:#fff;border-radius:24px;padding:24px;margin-bottom:16px}
+.vp-feature-hero h3{font-size:clamp(25px,3vw,34px);line-height:1.15;margin:8px 0}
+.vp-feature-hero p{color:#e6f4ea;margin:0;max-width:800px}
+.vp-subtle{color:var(--muted);font-size:15px}
+.vp-entry-list{display:grid;gap:10px;margin-top:14px}
+.vp-record{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:14px}
+.vp-record h4{margin:0 0 5px}.vp-record p{margin:4px 0 0;color:var(--muted);font-size:15px;white-space:pre-wrap;overflow-wrap:anywhere}
+.vp-record .meta{font-size:13px;color:var(--muted);font-weight:750;margin-bottom:4px}
+.vp-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:850;color:var(--teal2)}
+.vp-quickstart{border:1px solid var(--line);border-radius:22px;background:var(--surface);padding:20px;margin-bottom:16px}
+.vp-quickstart h3{margin:0 0 6px;font-size:22px}.vp-quickstart p{margin:0;color:var(--muted);font-size:15px}
+.vp-quick-buttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+.vp-check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.vp-tip{border:1px solid var(--line);border-radius:16px;background:var(--surface);padding:16px}
+.vp-tip h4{margin:0 0 6px}.vp-tip p{margin:0;color:var(--muted);font-size:15px}
+.vp-tip a{display:inline-block;margin-top:10px;color:var(--teal2);font-weight:800}
+.vp-pref-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.vp-pref-choice{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--paper);border-radius:14px;padding:12px;font-weight:750}
+.vp-pref-choice input{width:20px;height:20px;accent-color:var(--teal)}
+.vp-ambient-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}
+.vp-ambient-card select{min-height:48px;width:100%;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink)}
+.vp-status-line{font-size:14px;color:var(--muted);margin-top:9px}
+.vp-search-panel{border:1px solid var(--line);border-radius:22px;background:var(--surface);padding:20px}
+.vp-search-panel input,.vp-search-panel select{min-height:54px;border:1px solid var(--line);border-radius:13px;background:var(--surface);color:var(--ink);padding:12px;width:100%;font-size:17px}
+.vp-search-warning{display:none;margin:12px 0;padding:14px;border-radius:14px;background:var(--dangerbg);color:var(--danger);border:1px solid #e9bdb8;font-size:15px}
+.vp-search-warning.show{display:block}
+.vp-assistant-choice{width:100%;display:flex;gap:12px;align-items:center;justify-content:flex-start;text-align:left;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:15px;margin:8px 0;min-height:72px}
+.vp-assistant-choice span{font-size:24px}.vp-assistant-choice strong{display:block}.vp-assistant-choice small{display:block;color:var(--muted);font-size:14px}
+.vp-progress-dots{display:flex;gap:6px;justify-content:center;margin:10px 0}.vp-progress-dots span{width:7px;height:7px;border-radius:50%;background:var(--line)}.vp-progress-dots span.on{background:var(--teal2)}
+@media(max-width:760px){.vp-check-grid,.vp-pref-grid{grid-template-columns:1fr}.vp-feature-hero{padding:20px}.vp-record{padding:12px}.vp-quick-buttons .btn{flex:1}}
+
+
+.vp-bedtime-story{border:1px solid var(--line);border-radius:20px;background:linear-gradient(135deg,var(--surface),var(--lav));padding:20px}
+.vp-bedtime-story p{font-size:17px;line-height:1.8;max-width:900px}
+
 </style>
 </head>
 <body>
@@ -51,6 +109,7 @@ main{min-width:0}.topbar{display:flex;justify-content:space-between;align-items:
     <button data-view="consulta"><span class="ico">☷</span>Consulta médica</button>
     <button data-view="guia"><span class="ico">❔</span>Guía de ayuda</button>
     <button data-view="red"><span class="ico">♧</span>Mi red de apoyo</button>
+     <button data-view="meditaciones"><span class="ico">♫</span>Meditación y calma</button>
   </nav>
   <div class="side-note"><strong>Un día a la vez</strong>Pequeños pasos, información ordenada y más tranquilidad para tu día.</div>
 </aside>
@@ -67,7 +126,15 @@ main{min-width:0}.topbar{display:flex;justify-content:space-between;align-items:
 </header>
 
 <section class="view active" id="view-inicio">
-  <div class="hero"><div class="hero-content"><div class="eyebrow">Bienestar cotidiano · En un solo lugar</div><h3>Tu vida sigue teniendo mucho por disfrutar.</h3><p>Un espacio sencillo para ejercitar la mente, moverte con cuidado, registrar cómo te sentís y llegar mejor preparado a tus consultas.</p><div class="hero-actions"><button class="btn primary" data-goto="memoria">✦ Activar mi mente</button><button class="btn ghost" data-goto="consulta">☷ Preparar una consulta</button></div></div></div>
+  <div class="hero"><div class="hero-content"><div class="eyebrow">Bienestar cotidiano · En un solo lugar</div><h3>Tu vida sigue teniendo mucho por disfrutar.</h3><p>Un espacio sencillo para ejercitar la mente, moverte con cuidado, registrar cómo te sentís y llegar mejor preparado a tus consultas.</p><div class="hero-actions"><button class="btn primary" data-goto="memoria">✦ Activar mi mente</button><button class="btn ghost" data-goto="consulta">☷ Preparar una consulta</button><button class="btn ghost" data-goto="meditaciones">♫ Escuchar meditación guiada</button></div></div></div>
+
+  <article class="card vp-guided-promo" style="margin:16px 0;background:linear-gradient(120deg,var(--mint),var(--surface));border-color:var(--line)">
+    <div class="card-ico" aria-hidden="true">♫</div>
+    <div class="pill">Tu momento de calma</div>
+    <h4 style="font-size:22px;margin-top:10px">Meditación guiada para relajar cuerpo y mente</h4>
+    <p>Elegí una voz disponible en tu dispositivo o seguí la guía leyendo el texto. La narración está escrita en argentino, con instrucciones suaves y pausadas. No hace falta hacer nada perfecto: podés detenerte cuando quieras.</p>
+    <div class="actions"><button class="btn primary" data-goto="meditaciones">Abrir meditación guiada →</button><button class="btn outline" data-goto="meditaciones">Ver todas las relajaciones</button></div>
+  </article>
   <div class="grid cards">
     <article class="card tone-sky"><div class="card-ico">🧩</div><h4>Mente activa</h4><p>Juegos breves de memoria, atención y observación, a tu propio ritmo.</p><button class="go" data-goto="memoria">Empezar un juego →</button></article>
     <article class="card tone-gold"><div class="card-ico">🌿</div><h4>Movimiento suave</h4><p>Ideas sencillas para moverte con una silla estable y sin apurarte.</p><button class="go" data-goto="movimiento">Ver rutina →</button></article>
@@ -203,10 +270,41 @@ main{min-width:0}.topbar{display:flex;justify-content:space-between;align-items:
   <div class="section-head"><div><h3>Mis contactos</h3><p id="coCount">Todavía no agregaste contactos.</p></div></div><div id="coEntries" class="entries"></div>
 </section>
 
+
+<section class="view" id="view-meditaciones">
+  <div class="vp-meditation-hero">
+    <div class="eyebrow">Vida Plena · Un momento para vos</div>
+    <h3>Respirá. Aflojá. Volvé a tu ritmo.</h3>
+    <p>Meditaciones y relajaciones guiadas, con voz en español argentino. Podés elegir una voz disponible en tu dispositivo, escuchar a tu ritmo y detenerte cuando quieras.</p>
+    <div class="vp-meditation-controls">
+      <label for="vpVoiceMode">Preferencia de voz
+        <select id="vpVoiceMode"><option value="any">Cualquier voz disponible</option><option value="female">Preferentemente femenina</option><option value="male">Preferentemente masculina</option><option value="off">Sin voz (solo texto)</option></select>
+      </label>
+      <label for="vpVoicePick">Voz disponible en este dispositivo
+        <select id="vpVoicePick"><option value="">Cargando voces…</option></select>
+      </label>
+    </div>
+  </div>
+  <div class="notice"><strong>Antes de empezar</strong>Buscá una posición cómoda y segura. No escuches mientras caminás por la calle, manejás o hacés algo que requiera atención. Si cerrar los ojos no te resulta cómodo, dejalos abiertos. Podés saltear cualquier paso.</div>
+  <div class="section-head"><div><h3>Elegí cómo querés sentirte</h3><p>Sesiones suaves, sin exigencias y sin necesidad de hacerlas perfectas.</p></div><span class="pill" id="vpMeditationStatus">Contenido disponible</span></div>
+  <div class="vp-meditation-list" id="vpMeditationList"></div>
+  <div class="vp-meditation-player" id="vpMeditationPlayer" aria-live="polite">
+    <h4 id="vpMeditationTitle">Tu espacio de calma</h4>
+    <p id="vpMeditationText">Elegí una sesión para comenzar. Podés pausar o detener la voz en cualquier momento.</p>
+    <div class="vp-meditation-progress"><span id="vpMeditationProgress"></span></div>
+    <div class="actions">
+      <button class="btn primary" id="vpMeditationPlay" disabled>▶ Escuchar guía</button>
+      <button class="btn outline" id="vpMeditationPause" disabled>Ⅱ Pausar / continuar</button>
+      <button class="btn outline" id="vpMeditationStop" disabled>■ Detener</button>
+    </div>
+    <p class="smalltext" id="vpMeditationStep" style="margin-top:10px">La voz depende de las opciones instaladas en tu navegador o dispositivo.</p>
+  </div>
+</section>
+
 <div class="footer">Vida Plena es una herramienta de organización y educación general, no un servicio médico. No diagnostica, no reemplaza una consulta y no debe utilizarse para decidir tratamientos. Ante una urgencia, contactá al servicio de emergencias de tu localidad. <br><span id="appVersion">Vida Plena · versión inicial</span></div>
 </main>
 </div>
-<nav class="mobile-nav" id="mobileNav" aria-label="Navegación rápida"><button class="active" data-view="inicio"><span>⌂</span>Inicio</button><button data-view="memoria"><span>🧩</span>Memoria</button><button data-view="movimiento"><span>🌿</span>Movimiento</button><button data-view="salud"><span>♡</span>Salud</button><button data-view="guia"><span>❔</span>Ayuda</button></nav>
+<nav class="mobile-nav" id="mobileNav" aria-label="Navegación rápida"><button class="active" data-view="inicio"><span>⌂</span>Inicio</button><button data-view="memoria"><span>🧩</span>Mente</button><button data-view="movimiento"><span>🌿</span>Mover</button><button data-view="salud"><span>♡</span>Salud</button><button data-view="guia"><span>❔</span>Ayuda</button><button data-view="meditaciones"><span>♫</span>Calma</button></nav>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </div>
 <script>
@@ -219,7 +317,7 @@ function loadData(){try{return {...structuredClone(defaults),...(JSON.parse(loca
 function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){toast('No se pudo guardar. Exportá tus registros y revisá el espacio disponible.');}}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),3200);}
-const titles={inicio:'Buen día. Bienvenido a Vida Plena.',memoria:'Mente activa, sin apuro.',movimiento:'Moverse también es cuidarse.',vejiga:'Tus registros, para conversar mejor.',salud:'Escuchá cómo te sentís.',medicacion:'Tu lista, clara y organizada.',consulta:'Prepará tu próxima consulta.',guia:'Orientación sencilla, paso a paso.',red:'No tenés que hacerlo todo a solas.'};
+const titles={inicio:'Buen día. Bienvenido a Vida Plena.',memoria:'Mente activa, sin apuro.',movimiento:'Moverse también es cuidarse.',vejiga:'Tus registros, para conversar mejor.',salud:'Escuchá cómo te sentís.',medicacion:'Tu lista, clara y organizada.',consulta:'Prepará tu próxima consulta.',guia:'Orientación sencilla, paso a paso.',red:'No tenés que hacerlo todo a solas.',meditaciones:'Un momento de calma, a tu manera.'};
 function go(view){if(!titles[view])return;document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+view));document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));document.getElementById('pageTitle').textContent=titles[view];window.scrollTo({top:0,behavior:'smooth'});}
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.view)));
 document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.goto)));
@@ -279,7 +377,8 @@ applySettings();initPlan();renderBladder();renderHealth();renderMeds();renderVis
 </script>
 <script>
 (function(){
-const CODE=true,FB={"apiKey": "TU_API_KEY", "authDomain": "TU_PROYECTO.firebaseapp.com", "projectId": "TU_PROYECTO", "appId": "TU_APP_ID"};
+const CODE=true,FB=null;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id),KX='vpExtra';
 let LS={};try{LS=JSON.parse(localStorage.getItem(KX)||'{}')}catch(e){}
 const sv=()=>{try{localStorage.setItem(KX,JSON.stringify(LS))}catch(e){}};
@@ -294,20 +393,54 @@ const ov=h=>{let o=$('vpOv');if(!o){o=document.createElement('div');o.id='vpOv';
 const W='style="background:#fff;color:#174b46"';
 function welcome(){ov(`<div style="font-size:4rem">🌿</div><h1>Bienvenida, bienvenido a Vida Plena</h1><p>Un ratito por día para cuidar tu memoria, tu cuerpo y tu bienestar.</p><div class="vp-ben">🧠 Juegos de memoria<br>🔊 Lectura con voz en argentino<br>💊 Alarmas de medicinas en tu calendario<br>🚶 Ejercicios guiados con voz<br>📒 Diarios para llevarle al médico</div><button class="btn primary" id="vpI" ${W}>📲 Instalar la app</button><p id="vpIm"></p><button class="btn ghost" id="vpC">Ya la instalé, continuar</button>`);
  $('vpI').onclick=()=>{if(dp)dp.prompt();else $('vpIm').innerHTML='<b>iPhone:</b> tocá Compartir y elegí «Agregar a pantalla de inicio».<br><b>Android:</b> tocá los tres puntitos ⋮ y elegí «Instalar app».'};
- $('vpC').onclick=gate}
+ $('vpC').onclick=()=>{gate();if(!$('vpOv'))window.showVPLaunchChooserIfNeeded?.()}}
 function gate(){if(!CODE||LS.ok){const o=$('vpOv');o&&o.remove();return}
  ov(`<div style="font-size:3.5rem">🔑</div><h1>Ingresá tu código</h1><p>Lo recibiste con tu compra. Escribilo tal cual.</p><input id="vpCd" placeholder="TU CÓDIGO" autocomplete="off"><button class="btn primary" id="vpGo" ${W}>Entrar</button><p id="vpEr"></p>`);
  $('vpGo').onclick=chk}
 const ld=u=>new Promise((r,j)=>{const s=document.createElement('script');s.src=u;s.onload=r;s.onerror=j;document.head.appendChild(s)});
-async function chk(){const c=$('vpCd').value.trim().toUpperCase(),er=$('vpEr');if(!c)return;er.textContent='Verificando…';
- try{if(FB.apiKey.startsWith('TU_'))throw new Error('cfg');
-  if(!window.firebase){await ld('https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js');await ld('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js')}
-  if(!firebase.apps.length)firebase.initializeApp(FB);const db=firebase.firestore();
-  let d=await db.collection('licenses').doc(c).get(),x=d.exists?d.data():null;
-  if(!x){const q=await db.collection('licenses').where('code','==',c).limit(1).get();x=q.empty?null:q.docs[0].data()}
-  if(x&&x.active!==false&&x.status!=='revoked'){LS.ok=1;sv();gate()}else er.textContent='Ese código no es válido. Revisalo o escribinos por WhatsApp.'
- }catch(e){er.textContent=e.message==='cfg'?'Falta configurar Firebase en la app.':'No pudimos conectar. Revisá tu internet e intentá de nuevo.'}}
+const RRH = (function () {
+  const K = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  const rotr = (x, n) => (x >>> n) | (x << (32 - n));
+  function bytesOf(s) { const u = unescape(encodeURIComponent(s)), o = []; for (let i = 0; i < u.length; i++) o.push(u.charCodeAt(i)); return o; }
+  function sha256(bytes) {
+    let h = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+    const p = bytes.slice(), bl = bytes.length * 8; p.push(0x80); while (p.length % 64 !== 56) p.push(0);
+    for (const v of [Math.floor(bl / 4294967296), bl >>> 0]) p.push((v >>> 24) & 255, (v >>> 16) & 255, (v >>> 8) & 255, v & 255);
+    const w = new Array(64);
+    for (let i = 0; i < p.length; i += 64) {
+      for (let t = 0; t < 16; t++) w[t] = (p[i + 4*t] << 24) | (p[i + 4*t + 1] << 16) | (p[i + 4*t + 2] << 8) | p[i + 4*t + 3];
+      for (let t = 16; t < 64; t++) { const s0 = rotr(w[t-15], 7) ^ rotr(w[t-15], 18) ^ (w[t-15] >>> 3), s1 = rotr(w[t-2], 17) ^ rotr(w[t-2], 19) ^ (w[t-2] >>> 10); w[t] = (w[t-16] + s0 + w[t-7] + s1) | 0; }
+      let [a, b, c, d, e, f, g, hh] = h;
+      for (let t = 0; t < 64; t++) { const S1 = rotr(e, 6) ^ rotr(e, 11) ^ rotr(e, 25), ch = (e & f) ^ (~e & g), t1 = (hh + S1 + ch + K[t] + w[t]) | 0, S0 = rotr(a, 2) ^ rotr(a, 13) ^ rotr(a, 22), mj = (a & b) ^ (a & c) ^ (b & c), t2 = (S0 + mj) | 0; hh = g; g = f; f = e; e = (d + t1) | 0; d = c; c = b; b = a; a = (t1 + t2) | 0; }
+      h = [(h[0]+a)|0,(h[1]+b)|0,(h[2]+c)|0,(h[3]+d)|0,(h[4]+e)|0,(h[5]+f)|0,(h[6]+g)|0,(h[7]+hh)|0];
+    }
+    const o = []; for (const v of h) o.push((v >>> 24) & 255, (v >>> 16) & 255, (v >>> 8) & 255, v & 255); return o;
+  }
+  const hex = b => b.map(x => x.toString(16).padStart(2, '0')).join('');
+  const norm = c => String(c || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  function huella(code, salt, rounds) {
+    const n = norm(code); if (!n) return '';
+    let cur = sha256(bytesOf(salt + ':' + n));
+    for (let i = 0; i < rounds; i++) cur = sha256(cur.concat(bytesOf(n + salt)));
+    return hex(cur);
+  }
+  return { sha256, bytesOf, hex, norm, huella };
+})();
+
+const FK='PEGAR_AQUI_LA_API_KEY',PID='PEGAR_AQUI_EL_ID_DEL_PROYECTO',SALT='vida-plena-2026',ROUNDS=20000,DOC=`https://firestore.googleapis.com/v1/projects/${PID}/databases/(default)/documents/codigos/`;
+const did=()=>{let d=localStorage.vpDid;if(!d){d=Array.from(crypto.getRandomValues(new Uint8Array(12))).map(x=>x.toString(16).padStart(2,'0')).join('');localStorage.vpDid=d}return d};
+async function fb(h,reg){const r=await fetch(DOC+h+'?key='+FK);if(r.status==404)return'no';if(!r.ok)throw new Error('net');const f=(await r.json()).fields||{};
+const act=f.active&&f.active.booleanValue===true,mx=+((f.max&&f.max.integerValue)||1),dv=((f.devices&&f.devices.arrayValue&&f.devices.arrayValue.values)||[]).map(x=>x.stringValue);
+if(!act)return'baja';if(dv.includes(did()))return'ok';if(!reg)return'no';if(dv.length>=mx)return'lleno';
+const w=await fetch(DOC+h+'?updateMask.fieldPaths=devices&key='+FK,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:{devices:{arrayValue:{values:dv.concat(did()).map(x=>({stringValue:x}))}}}})});
+return w.ok?'ok':'net'}
+async function chk(){const v=$('vpCd').value,er=$('vpEr');if(RRH.norm(v).length<6){er.textContent='Escribí tu código completo.';return}er.textContent='Verificando…';await new Promise(r=>setTimeout(r,30));
+try{if(/PEGAR/.test(FK+PID))throw new Error('cfg');const h=RRH.huella(v,SALT,ROUNDS),s=await fb(h,true);
+if(s=='ok'){LS.ok=1;LS.h=h;LS.last=Date.now();sv();gate()}else er.textContent={no:'Ese código no es válido. Revisalo o escribinos por WhatsApp.',baja:'Ese código ya no está activo. Escribinos y lo resolvemos.',lleno:'Ese código ya se usó en el máximo de celulares. Escribinos si cambiaste de teléfono.',net:'No pudimos verificar. Revisá tu conexión e intentá de nuevo.'}[s]}
+catch(e){er.textContent=e.message==='cfg'?'Falta configurar el acceso de la app.':'No pudimos conectar. Revisá tu internet e intentá de nuevo.'}}
+async function vpRecheck(){const old=Date.now()-(+LS.last||Date.now())>7*864e5;try{const s=await fb(LS.h,false);if(s=='ok'){LS.last=Date.now();sv()}else if(s=='no'||s=='baja'){LS.ok=0;sv();gate()}}catch(e){if(old){LS.ok=0;sv();gate();const er=$('vpEr');if(er)er.textContent='Conectate a internet para renovar tu acceso (pasó más de una semana).'}}}
 if(standalone||LS.ok)gate();else welcome();
+if(LS.ok&&LS.h)vpRecheck();
 
 /* ===== 2) Voz en argentino: mujer / hombre / sin voz ===== */
 let VOI=[];const lv=()=>{VOI=('speechSynthesis'in window?speechSynthesis.getVoices():[]).filter(v=>/^es/i.test(v.lang))};
@@ -323,6 +456,7 @@ function say(t,end){if(!('speechSynthesis'in window)||LS.voz==='off'){end&&end()
  if(fb&&!warned){warned=1;tt('Tu celular no tiene esa voz exacta en español; usamos la más parecida.')}}
 const tools=document.querySelector('.topbar .tools'),vb=document.createElement('button');vb.className='iconbtn textbtn';vb.id='vpVz';
 const VL={f:'🗣 Voz: Mujer',m:'🗣 Voz: Hombre',off:'🔇 Sin voz'};const rv=()=>vb.textContent=VL[LS.voz||'f'];rv();
+window.VPVoiceControl={get:()=>LS.voz||'f',set:v=>{if(!['f','m','off'].includes(v))return;LS.voz=v;sv();rv();if('speechSynthesis'in window)speechSynthesis.cancel();},say:(t)=>say(t)};
 vb.onclick=()=>{LS.voz={f:'m',m:'off',off:'f'}[LS.voz||'f'];sv();rv();speechSynthesis.cancel();if(LS.voz!=='off')say('Hola, soy tu guía. ¿Me escuchás bien?')};
 tools.insertBefore(vb,tools.firstChild);
 const rb=$('readBtn'),nb=rb.cloneNode(true);rb.replaceWith(nb);
@@ -386,6 +520,386 @@ const DC=['Nombrá 10 animales que empiecen con C.','Contá de 7 en 7 desde 100.
 LS.w=LS.w||{};const wn=()=>LS.w[today()]||0;
 document.querySelector('#view-inicio .grid.cards').insertAdjacentHTML('beforebegin',`<div class="grid two" style="margin-bottom:14px"><article class="card tone-sky"><h4>💧 Vasos de agua de hoy</h4><div class="vp-big" id="vpW">${wn()} de 8</div><button class="btn primary" id="vpWp" style="margin-top:8px">+ Tomé un vaso</button></article><article class="card tone-gold"><h4>🎯 Desafío del día</h4><p style="font-size:1.1rem">${DC[new Date().getDay()]}</p></article></div>`);
 $('vpWp').onclick=()=>{LS.w[today()]=wn()+1;sv();$('vpW').textContent=wn()+' de 8'};
+
+/* ===== Vida Plena Premium: meditaciones guiadas con voz es-AR ===== */
+const vpMeditationsFallback = [{"id":"meditacion-relajacion-integral","title":"Meditación guiada para relajar cuerpo y mente","duration":"5 a 7 minutos","description":"Una guía completa, cálida y pausada para aflojar tensiones y descansar a tu ritmo.","steps":["Hola. Este momento es para vos. Buscá una posición cómoda y segura, sentado o sentada, con la espalda apoyada y los pies descansando en el suelo. Si preferís mantener los ojos abiertos, está perfecto.","Antes de empezar, recordá que no hay nada que hacer bien ni mal. Si alguna indicación no te resulta cómoda, simplemente salteala. Podés detener esta práctica cuando quieras.","Llevá la atención a los pies. Notá el contacto con el suelo, la temperatura y el apoyo. No hace falta moverlos ni cambiar nada. Solamente registrá que están ahí, sosteniéndote.","Ahora prestá atención a las piernas y a la cadera. Permití que el peso descanse sobre la silla. Si encontrás tensión, probá aflojar un poquito, sin empujar ni hacer fuerza.","Llevá la atención a las manos. Dejá que descansen sobre las piernas o sobre los apoyabrazos. Aflojá los dedos, uno por uno, como si no tuvieran ninguna tarea que cumplir durante estos minutos.","Ahora observá los hombros. A veces se levantan sin que nos demos cuenta. Si te resulta agradable, dejalos bajar apenas. No hace falta que queden perfectos; alcanza con darles un poco de descanso.","Notá el rostro. Aflojá la mandíbula si podés, separando apenas los dientes. Suavizá la frente y dejá descansar el contorno de los ojos. Si algo se siente incómodo, volvé a tu posición habitual.","Vamos a prestar atención a la respiración, sin cambiarla a la fuerza. Notá cómo entra y sale el aire. No hace falta respirar hondo ni contar. Dejá que tu cuerpo encuentre su propio ritmo.","Imaginá ahora un lugar que te transmita calma: puede ser un patio conocido, una plaza tranquila, un jardín, la orilla del río o cualquier rincón que te haga bien. No necesitás verlo con claridad; alcanza con recordarlo.","En ese lugar imaginario, observá un detalle amable. Tal vez una luz tibia, el movimiento de las hojas o el sonido suave del agua. Quedate un momento con ese detalle, sin exigirte sentir nada especial.","Si apareció una preocupación, no hace falta pelearte con ella ni resolverla ahora. Podés decirte: 'Lo voy a atender cuando corresponda. En este momento, me estoy regalando una pausa'. Después, volvé suavemente a la sensación de apoyo.","Para terminar, sentí nuevamente los pies en el suelo y el cuerpo sostenido por la silla. Mové despacio los dedos de las manos. Mirá alrededor cuando te resulte cómodo y llevate esta idea: puedo ir de a una cosa por vez. Gracias por regalarte este momento."]},{"id":"respirar","title":"Respiración tranquila","duration":"3 minutos","description":"Una pausa breve para bajar el ritmo, sin retener el aire.","steps":["Buscá una postura cómoda y apoyá los pies. Si querés, dejá las manos descansando sobre las piernas.","Tomá aire suavemente por la nariz, sin llenar los pulmones a la fuerza. Después soltalo despacio, como te salga natural.","No hace falta contar ni respirar perfecto. Simplemente notá cómo entra el aire y cómo sale.","Si aparece un pensamiento, no te pelees con él. Dejalo pasar y volvé con amabilidad a tu respiración.","Aflojá la mandíbula, los hombros y las manos. Hacé una última respiración cómoda y seguí con tu día cuando estés listo o lista."]},{"id":"relajar","title":"Relajación paso a paso","duration":"5 minutos","description":"Recorrido suave por el cuerpo para descansar sin exigencias.","steps":["Acomodate en una silla firme o en un lugar donde estés bien apoyado. Mantené los ojos abiertos si así te sentís mejor.","Llevá la atención a los pies. No necesitás moverlos: solamente notá cómo están apoyados.","Subí la atención a las piernas y aflojá cualquier tensión que puedas soltar sin esfuerzo.","Dejá caer los hombros un poquito. Relajá las manos y separá suavemente los dientes.","Notá la cara, la frente y alrededor de los ojos. No hace falta cambiar nada: alcanza con darte cuenta.","Sentí el apoyo de la silla y el contacto de los pies con el suelo. Quedate unos segundos en esa sensación de sostén.","Cuando quieras, mové suavemente los dedos de las manos y volvé a mirar alrededor. No hay apuro."]},{"id":"descanso","title":"Prepararme para descansar","duration":"4 minutos","description":"Un cierre sereno para el final del día.","steps":["Este ratito es para vos. Acomodate de manera segura y bajá un poco el ritmo.","No hace falta resolver ahora todo lo que quedó pendiente. Por unos minutos, podés dejarlo para después.","Respirá naturalmente. Con cada exhalación, imaginá que soltás un poquito de la tensión del día.","Pensá en algo pequeño que te haya dado alivio, compañía o alegría hoy. Si no se te ocurre nada, está bien también.","Repetí para vos: hice lo que pude con el día que tuve. Ahora puedo descansar.","Quedate en silencio unos instantes. Cuando estés preparado o preparada, terminá despacio."]},{"id":"preocupacion","title":"Cuando tengo muchas preocupaciones","duration":"4 minutos","description":"Una guía amable para hacer una pausa cuando la cabeza no para.","steps":["Frená un momento, si estás en un lugar seguro. No tenés que solucionar todo ahora mismo.","Notá tres cosas que puedas ver a tu alrededor. Después identificá dos sonidos y una sensación física cómoda.","Respirá de manera natural. Si respirar hondo te incomoda, no lo fuerces: dejá que el cuerpo respire solo.","Decite con amabilidad: estoy acá, en este momento. Puedo ir de a una cosa por vez.","Si una preocupación necesita atención, podés anotarla para retomarla más tarde o hablarla con alguien de confianza.","Sentí los pies apoyados y mirá a tu alrededor. Elegí el próximo paso pequeño, sin exigirte más de la cuenta."]},{"id":"gratitud","title":"Reconocer lo bueno de hoy","duration":"3 minutos","description":"Un ejercicio de atención a los pequeños momentos valiosos.","steps":["Buscá una posición cómoda. No hay una manera correcta de hacer este ejercicio.","Recordá un momento sencillo de hoy: una charla, una canción, el sol, una comida o un gesto amable.","Si hoy fue difícil, no tenés que encontrar algo extraordinario. Puede ser simplemente haber llegado hasta este momento.","Dejá que ese recuerdo esté presente unos segundos, sin obligarte a sentir nada especial.","Agradecete haber reservado este ratito para vos. Cuando quieras, volvé a tus actividades."]},{"id":"autocompasion","title":"Tratarme con cariño","duration":"3 minutos","description":"Una pausa para hablarte con la misma amabilidad que ofrecerías a alguien querido.","steps":["Acomodate y soltá los hombros si te resulta cómodo.","Pensá cómo le hablarías a una persona querida que está pasando un día difícil.","Probá ofrecerte esas mismas palabras: merezco paciencia, puedo pedir ayuda y no tengo que poder con todo.","Respirá naturalmente y dejá que las palabras se asienten, sin necesidad de creerlas por completo ahora.","Recordá que pedir compañía o ayuda también es una forma de cuidarte. Terminá cuando te sientas listo o lista."]},{"id":"pausa-breve","title":"Pausa de un minuto","duration":"1 minuto","description":"Un alto breve para volver al presente.","steps":["Si estás en un lugar seguro, frená un momento y apoyá los pies.","Notá el contacto de tu cuerpo con la silla o el suelo.","Respirá naturalmente, sin forzar ni retener el aire.","Mirá a tu alrededor y nombrá mentalmente una cosa que ves.","Cuando estés listo o lista, seguí con el próximo paso pequeño."]},{"id":"jardin-calmo","title":"Imaginar un lugar tranquilo","duration":"7 minutos","description":"Una visualización serena que podés adaptar con los ojos abiertos.","steps":["Buscá una postura segura y cómoda. Podés mantener los ojos abiertos.","Imaginá un lugar que te resulte agradable: un jardín, una plaza tranquila, una costa o un patio conocido.","Pensá en los colores de ese lugar. No hace falta verlo con claridad; alcanza con recordarlo o imaginarlo.","Imaginá los sonidos suaves que podría haber allí: hojas, viento, pájaros o agua.","Notá qué sensación cómoda te trae ese lugar. No hace falta sentir nada en particular.","Si aparecen pensamientos, dejalos pasar y volvé a la imagen con amabilidad.","Agradecete este momento. Volvé despacio a la habitación, mirando alrededor y moviendo suavemente las manos."]},{"id":"entre-dias","title":"Soltar la tensión del día","duration":"5 minutos","description":"Pausa guiada de cierre del día, sin exigir que todo esté resuelto.","steps":["Acomodate con el cuerpo bien apoyado. Aflojá la mandíbula si te resulta cómodo.","Recordá que no necesitás resolver todo antes de descansar.","Observá las manos y dejalas reposar sin esfuerzo.","Notá los hombros y permití que bajen apenas, sin empujarlos.","Respirá a tu ritmo. Si enfocarte en la respiración incomoda, elegí un sonido tranquilo del ambiente.","Pensá qué te gustaría dejar para mañana y, si sirve, anotá una palabra para recordarlo.","Volvé a sentir los pies en el suelo. Terminá cuando quieras."]},{"id":"pausa-alegria","title":"Un pequeño momento agradable","duration":"3 minutos","description":"Orientá la atención a una experiencia sencilla que te haga bien.","steps":["Tomate unos minutos en un lugar cómodo.","Recordá una cosa pequeña que te resulte agradable: una canción, una planta, una charla o una comida.","Prestá atención a un detalle de ese recuerdo.","Dejá que el recuerdo esté presente sin exigirte sentir felicidad.","Elegí una pequeña cosa que te gustaría regalarte hoy y retomá tu día a tu ritmo."]}];
+let vpMeditations = vpMeditationsFallback, vpSelectedMeditation = null, vpStep = 0, vpPaused = false, vpTextModeStarted = false;
+let vpVoiceList = [];
+const vpEl = id => document.getElementById(id);
+function vpGetVoices(){
+ if(!('speechSynthesis' in window)) return [];
+ return speechSynthesis.getVoices().filter(v=>/^es(-|_)?AR/i.test(v.lang)||/^es/i.test(v.lang));
+}
+function vpFillVoices(){
+ const sel=vpEl('vpVoicePick'), mode=vpEl('vpVoiceMode'); if(!sel||!mode)return;
+ if(mode.value==='off'){sel.innerHTML='';sel.add(new Option('Modo sin voz: leer en pantalla',''));sel.disabled=true;return;}
+ sel.disabled=false;vpVoiceList=vpGetVoices(); const previous=sel.value;
+ const filtered=vpVoiceList.filter(v=>{const n=(v.name||'').toLowerCase();if(mode.value==='female')return /female|mujer|woman|paulina|monica|helena|luciana|sofia|sabina|elena|laura|camila/i.test(n);if(mode.value==='male')return /male|hombre|man|jorge|diego|pablo|carlos|raul|andres|juan/i.test(n);return true});
+ sel.innerHTML='';
+ if(!filtered.length){sel.add(new Option('Voz predeterminada disponible',''));return;}
+ filtered.forEach(v=>{sel.add(new Option(v.name+' · '+v.lang,String(vpVoiceList.indexOf(v))));});
+ if(previous && [...sel.options].some(o=>o.value===previous))sel.value=previous;
+}
+window.vpFillVoices=vpFillVoices;
+function vpSelectMeditation(id){
+ const found=vpMeditations.find(m=>m.id===id);
+ if(!found)return;
+ vpSelectedMeditation=found;vpStep=0;vpPaused=false;vpTextModeStarted=false;
+ const voiceOff=window.VPVoiceControl?.get?.()==='off'||vpEl('vpVoiceMode')?.value==='off';
+ vpEl('vpMeditationPlay').textContent=voiceOff?'Mostrar guía / avanzar':'▶ Escuchar guía';
+ vpEl('vpMeditationPause').disabled=voiceOff;
+ vpEl('vpMeditationTitle').textContent=found.title;
+ vpEl('vpMeditationText').textContent=found.steps[0];
+ vpEl('vpMeditationProgress').style.width='0%';
+ vpEl('vpMeditationStep').textContent=`Paso 1 de ${found.steps.length}. Tocá «Escuchar guía» para escuchar la narración. Entre pasos habrá pausas breves para acompañarte sin apuro.`;
+ vpEl('vpMeditationPlay').disabled=false;
+ vpEl('vpMeditationStop').disabled=false;
+}
+function vpRenderMeditations(){
+ const list=vpEl('vpMeditationList');if(!list)return;
+ list.innerHTML=vpMeditations.map(m=>`<article class="vp-meditation-item"><h4>${esc(m.title)}</h4><p>${esc(m.description||'Una pausa guiada para vos.')}<br><span class="smalltext">${esc(m.duration||'A tu ritmo')}</span></p><button class="btn soft full" style="margin-top:14px" data-vp-med="${esc(m.id)}">Elegir y leer esta guía →</button></article>`).join('');
+ list.querySelectorAll('[data-vp-med]').forEach(b=>b.onclick=()=>vpSelectMeditation(b.dataset.vpMed));
+ const stillExists=vpSelectedMeditation&&vpMeditations.some(m=>m.id===vpSelectedMeditation.id);
+ if(!stillExists){
+  const preferred=vpMeditations.find(m=>m.id==='meditacion-relajacion-integral')||vpMeditations.find(m=>m.id==='relajar')||vpMeditations[0];
+  if(preferred)vpSelectMeditation(preferred.id);
+ }
+}
+let vpAdvanceTimer=null;
+function vpSpeakStep(){
+ if(vpAdvanceTimer){clearTimeout(vpAdvanceTimer);vpAdvanceTimer=null;}
+ if(window.VPVoiceControl?.get?.()==='off'||vpEl('vpVoiceMode')?.value==='off'){
+  if(vpSelectedMeditation){
+   vpEl('vpMeditationText').textContent=vpSelectedMeditation.steps[vpStep];
+   vpEl('vpMeditationProgress').style.width=((vpStep+1)/vpSelectedMeditation.steps.length*100)+'%';
+   vpEl('vpMeditationStep').textContent=`Modo sin voz · Paso ${vpStep+1} de ${vpSelectedMeditation.steps.length}. Leé en pantalla y avanzá cuando quieras.`;
+   vpEl('vpMeditationPlay').textContent=vpStep>=vpSelectedMeditation.steps.length-1?'↻ Volver a empezar':'Siguiente paso →';
+   vpEl('vpMeditationPause').disabled=true;
+  }return;
+ }
+ if(!vpSelectedMeditation||!('speechSynthesis' in window)){
+  if(vpEl('vpMeditationStep'))vpEl('vpMeditationStep').textContent='La voz no está disponible en este navegador. La meditación completa queda escrita en pantalla para que puedas seguirla.';
+  return;
+ }
+ speechSynthesis.cancel();
+ const text=vpSelectedMeditation.steps[vpStep];
+ vpEl('vpMeditationText').textContent=text;
+ vpEl('vpMeditationProgress').style.width=((vpStep+1)/vpSelectedMeditation.steps.length*100)+'%';
+ vpEl('vpMeditationStep').textContent=`Paso ${vpStep+1} de ${vpSelectedMeditation.steps.length}. Escuchá a tu ritmo. Al terminar, habrá una pausa breve.`;
+ const u=new SpeechSynthesisUtterance(text);u.lang='es-AR';u.rate=.78;u.pitch=1;
+ const selected=vpEl('vpVoicePick')?.value;
+ if(selected!=='' && vpVoiceList[Number(selected)])u.voice=vpVoiceList[Number(selected)];
+ u.onend=()=>{
+  if(vpPaused)return;
+  if(vpStep<vpSelectedMeditation.steps.length-1){
+   vpEl('vpMeditationStep').textContent='Tomate un instante antes de continuar…';
+   vpAdvanceTimer=setTimeout(()=>{if(!vpPaused){vpStep++;vpSpeakStep()}},2200);
+  }else{
+   vpEl('vpMeditationStep').textContent='Terminaste la guía. Quedate en silencio unos instantes si te hace bien, o elegí otra meditación.';
+   vpEl('vpMeditationProgress').style.width='100%';
+  }
+ };
+ u.onerror=()=>{vpEl('vpMeditationStep').textContent='No se pudo reproducir la voz. Probá otra voz disponible o seguí la meditación leyendo el texto.'};
+ speechSynthesis.speak(u);
+}
+vpEl('vpMeditationPlay')?.addEventListener('click',()=>{
+ if(!vpSelectedMeditation)return;
+ if(vpAdvanceTimer){clearTimeout(vpAdvanceTimer);vpAdvanceTimer=null;}
+ vpPaused=false;
+ const voiceOff=window.VPVoiceControl?.get?.()==='off'||vpEl('vpVoiceMode')?.value==='off';
+ if(voiceOff){
+  if(vpTextModeStarted)vpStep=vpStep<vpSelectedMeditation.steps.length-1?vpStep+1:0;
+  vpTextModeStarted=true;vpSpeakStep();return;
+ }
+ if(vpStep>=vpSelectedMeditation.steps.length-1 && vpEl('vpMeditationProgress').style.width==='100%')vpStep=0;
+ vpTextModeStarted=false;vpEl('vpMeditationPlay').textContent='▶ Escuchar guía';vpEl('vpMeditationPause').disabled=false;vpSpeakStep();
+});
+vpEl('vpMeditationPause')?.addEventListener('click',()=>{if(!('speechSynthesis'in window))return;if(speechSynthesis.paused){vpPaused=false;speechSynthesis.resume()}else if(speechSynthesis.speaking){vpPaused=true;speechSynthesis.pause()}});
+vpEl('vpMeditationStop')?.addEventListener('click',()=>{
+ if(vpAdvanceTimer){clearTimeout(vpAdvanceTimer);vpAdvanceTimer=null;}
+ if('speechSynthesis'in window)speechSynthesis.cancel();
+ vpPaused=true;vpTextModeStarted=false;
+ vpEl('vpMeditationPlay').textContent=(window.VPVoiceControl?.get?.()==='off'||vpEl('vpVoiceMode')?.value==='off')?'Mostrar guía / avanzar':'▶ Escuchar guía';
+ vpEl('vpMeditationStep').textContent='Sesión detenida. Podés volver a escucharla cuando quieras.';
+});
+vpEl('vpVoiceMode')?.addEventListener('change',()=>{
+ vpFillVoices();
+ if('speechSynthesis'in window)speechSynthesis.cancel();
+ if(vpAdvanceTimer){clearTimeout(vpAdvanceTimer);vpAdvanceTimer=null;}
+ if(vpEl('vpVoiceMode').value==='off'){
+  vpPaused=true;vpTextModeStarted=false;
+  if(vpSelectedMeditation){vpEl('vpMeditationText').textContent=vpSelectedMeditation.steps[vpStep];vpEl('vpMeditationPlay').textContent='Mostrar guía / avanzar';vpEl('vpMeditationPause').disabled=true;vpEl('vpMeditationStep').textContent='Modo sin voz: leé la guía y usá el botón para avanzar.';}
+ }else{
+  vpPaused=false;vpEl('vpMeditationPlay').textContent='▶ Escuchar guía';
+  if(vpSelectedMeditation)vpEl('vpMeditationPause').disabled=false;
+ }
+});
+if('speechSynthesis'in window){vpFillVoices();speechSynthesis.onvoiceschanged=vpFillVoices;}
+vpRenderMeditations();
+/* Busca actualizaciones online en meditaciones.json junto a la aplicación. Si no hay conexión
+   o el archivo no está publicado, conserva estas guías incorporadas y sigue funcionando. */
+(async()=>{
+ const status=vpEl('vpMeditationStatus');
+ try{
+  if(!navigator.onLine)throw new Error('offline');
+  const response=await fetch(new URL('meditaciones.json',document.baseURI),{cache:'no-store'});
+  if(!response.ok)throw new Error('sin catálogo online');
+  const remote=await response.json();
+  if(Array.isArray(remote.meditations)&&remote.meditations.length){
+   const valid=remote.meditations.filter(m=>m&&m.id&&m.title&&Array.isArray(m.steps)&&m.steps.length&&m.steps.every(x=>typeof x==='string'));
+   if(valid.length){vpMeditations=valid;vpRenderMeditations();status.textContent='Guías actualizadas';}
+  } else status.textContent='Contenido disponible';
+ }catch(e){if(status)status.textContent=navigator.onLine?'Guías disponibles':'Disponible sin conexión';}
 })();
-</script></body>
+
+})();
+</script><script>
+(()=>{'use strict';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const VP_KEY='vidaPlenaPremiumPlusV1';
+const VP_DEFAULT={agenda:[],mood:[],sleep:[],socialNote:'',socialChecks:{},homeChecks:{},homeDate:'',memoryNote:'',preferences:{font:21,voice:'f',ambient:'off',launchMode:'tools',askOnStart:false,assistant:true,setupDone:false},updateDate:''};
+let vpData;try{vpData={...VP_DEFAULT,...JSON.parse(localStorage.getItem(VP_KEY)||'{}')};vpData.preferences={...VP_DEFAULT.preferences,...(vpData.preferences||{})}}catch(e){vpData=JSON.parse(JSON.stringify(VP_DEFAULT))}
+const $=id=>document.getElementById(id);
+const vpEsc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const vpSave=()=>{try{localStorage.setItem(VP_KEY,JSON.stringify(vpData))}catch(e){vpToast('No se pudo guardar. Descargá un resumen y revisá el espacio disponible del navegador.')}};
+const vpToast=m=>{const t=$('toast');if(t){t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3400)}};
+const vpToday=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const vpTitles={inicio:'Buen día. Bienvenido a Vida Plena.',memoria:'Mente activa, sin apuro.',movimiento:'Moverse también es cuidarse.',vejiga:'Tus registros, para conversar mejor.',salud:'Escuchá cómo te sentís.',medicacion:'Tu lista, clara y organizada.',consulta:'Prepará tu próxima consulta.',guia:'Orientación sencilla, paso a paso.',red:'No tenés que hacerlo todo a solas.',meditaciones:'Un momento de calma, a tu manera.',guiado:'Entrenamiento guiado, a tu ritmo.',juegos2:'Más juegos para la mente.',agenda:'Tus turnos, fechas y compromisos.',bienestar:'Descanso y bienestar emocional.',social:'Tus vínculos y actividades favoritas.',autonomia:'Tu casa, tus rutinas y tu autonomía.',informacion:'Información práctica para el día a día.',busqueda:'Buscá una duda que todavía no está en la app.',preferencias:'Elegí cómo querés usar Vida Plena.',asistente:'¿Qué necesitás hoy?',mas:'Más herramientas de Vida Plena.'};
+const main=document.querySelector('main');
+const newViews=String.raw`
+<section class="view" id="view-agenda">
+ <div class="vp-feature-hero"><div class="eyebrow">Vida Plena · Organización personal</div><h3>Lo importante, ordenado y a mano.</h3><p>Turnos, cumpleaños, compromisos y actividades en un solo lugar. Tus datos se guardan en este dispositivo.</p></div>
+ <div class="grid two">
+  <article class="card"><h4>Agregar una fecha</h4><form id="vpAgendaForm"><div class="formgrid" style="margin-top:14px">
+   <div class="field full"><label for="vpAgTitle">¿Qué querés recordar?</label><input id="vpAgTitle" required maxlength="120" placeholder="Ej. turno con clínica médica"></div>
+   <div class="field"><label for="vpAgType">Tipo</label><select id="vpAgType"><option>Turno médico</option><option>Cumpleaños</option><option>Compromiso</option><option>Actividad recreativa</option><option>Recordatorio personal</option></select></div>
+   <div class="field"><label for="vpAgDate">Fecha</label><input id="vpAgDate" type="date" required></div>
+   <div class="field"><label for="vpAgTime">Hora (opcional)</label><input id="vpAgTime" type="time"></div>
+   <div class="field full"><label for="vpAgNote">Notas (opcional)</label><textarea id="vpAgNote" placeholder="Dirección, qué llevar, persona con quien voy…"></textarea></div>
+  </div><div class="actions"><button class="btn primary" type="submit">Guardar fecha</button><button class="btn outline" type="button" id="vpAgICS">Descargar para mi calendario</button><button class="btn outline" type="button" id="vpAgPrint">Imprimir agenda</button></div></form></article>
+  <article class="card"><h4>Un recordatorio amable</h4><p>Podés anotar turnos y cumpleaños sin tener que acordarte de todo de memoria. Para los recordatorios que deban sonar, descargá el archivo y agregalo al calendario del celular.</p><div class="notice"><strong>Privacidad</strong>La agenda no se comparte automáticamente ni envía notificaciones por sí sola. Los archivos que exportes los manejás vos.</div><div class="notice warning"><strong>Fechas importantes</strong>Revisá la hora y la fecha antes de exportar, sobre todo si hay un turno o estudio médico.</div></article>
+ </div>
+ <div class="section-head"><div><h3>Mi agenda</h3><p id="vpAgCount">Todavía no hay fechas guardadas.</p></div></div><div id="vpAgList" class="vp-entry-list"></div>
+</section>
+<section class="view" id="view-bienestar">
+ <div class="vp-feature-hero"><div class="eyebrow">Descanso · Emociones · Autocuidado</div><h3>También importa cómo te sentís.</h3><p>Un espacio privado para registrar tu ánimo, observar tus noches y crear una rutina tranquila sin exigirte de más.</p><div class="hero-actions" style="margin-top:16px"><button class="btn primary" data-vp-go="meditaciones">♫ Ir a las meditaciones</button><button class="btn ghost" data-vp-go="social">🤝 Ver ideas para conectar</button></div></div>
+ <div class="grid two">
+  <article class="card"><h4>Mi registro de ánimo</h4><p class="vp-subtle">No hay respuestas correctas. Este registro no es un diagnóstico.</p><form id="vpMoodForm"><div class="formgrid" style="margin-top:14px">
+   <div class="field"><label for="vpMoodDate">Fecha</label><input id="vpMoodDate" type="date" required></div>
+   <div class="field"><label for="vpMood">¿Cómo me siento?</label><select id="vpMood"><option>En calma</option><option>Contento/a</option><option>Con energía</option><option>Preocupado/a</option><option>Triste</option><option>Solo/a</option><option>Irritable</option><option>Cansado/a</option><option>Con muchas cosas en la cabeza</option></select></div>
+   <div class="field"><label for="vpStress">Nivel de tensión (0 a 10)</label><input id="vpStress" type="number" min="0" max="10" value="3"></div>
+   <div class="field"><label for="vpHelp">¿Qué podría ayudar hoy?</label><select id="vpHelp"><option>Descansar un rato</option><option>Hablar con alguien</option><option>Salir a tomar aire, si es seguro</option><option>Escuchar una meditación</option><option>Escribir lo que siento</option><option>Hacer una actividad que disfruto</option><option>No lo sé todavía</option></select></div>
+   <div class="field full"><label for="vpMoodNote">Algo que quiera recordar</label><textarea id="vpMoodNote" placeholder="¿Qué me está preocupando? ¿Qué me hizo bien? ¿Qué necesito?"></textarea></div>
+  </div><div class="actions"><button class="btn primary" type="submit">Guardar mi registro</button><button class="btn outline" type="button" id="vpMoodExport">Descargar registros</button></div></form></article>
+  <article class="card"><h4>Mi diario del sueño</h4><p class="vp-subtle">Registrá tus hábitos para conversar con un profesional si el descanso te preocupa.</p><form id="vpSleepForm"><div class="formgrid" style="margin-top:14px">
+   <div class="field"><label for="vpSleepDate">Fecha</label><input id="vpSleepDate" type="date" required></div>
+   <div class="field"><label for="vpSleepQuality">¿Cómo descansé?</label><select id="vpSleepQuality"><option>Muy bien</option><option>Bien</option><option>Más o menos</option><option>Mal</option><option>Muy mal</option></select></div>
+   <div class="field"><label for="vpBedTime">Hora aproximada de acostarme</label><input id="vpBedTime" type="time"></div>
+   <div class="field"><label for="vpWakeTime">Hora de levantarme</label><input id="vpWakeTime" type="time"></div>
+   <div class="field"><label for="vpAwakenings">Despertares durante la noche</label><input id="vpAwakenings" type="number" min="0" max="30" placeholder="Si lo recordás"></div>
+   <div class="field"><label for="vpNap">¿Dormí siesta?</label><select id="vpNap"><option>No</option><option>Sí, corta</option><option>Sí, larga</option></select></div>
+   <div class="field full"><label for="vpSleepNote">Notas</label><textarea id="vpSleepNote" placeholder="Cómo me sentí durante el día, molestias, ruidos…"></textarea></div>
+  </div><div class="actions"><button class="btn primary" type="submit">Guardar noche</button><button class="btn outline" type="button" id="vpSleepExport">Descargar diario</button></div></form></article>
+ </div>
+ <div class="section-head"><div><h3>Una rutina nocturna a mi medida</h3><p>No es una lista obligatoria: elegí solo lo que te sirva.</p></div></div>
+ <div class="card"><div class="list-check" id="vpNightRoutine"><label class="check-row"><input type="checkbox" data-night="lights"><span><strong>Preparar una luz segura para la noche</strong><small>Dejar iluminado el camino si me levanto.</small></span></label><label class="check-row"><input type="checkbox" data-night="comfort"><span><strong>Acomodar la cama y la temperatura</strong><small>Elegir ropa y abrigo cómodos.</small></span></label><label class="check-row"><input type="checkbox" data-night="calm"><span><strong>Hacer una pausa de calma</strong><small>Una meditación breve o respiración natural.</small></span></label><label class="check-row"><input type="checkbox" data-night="pending"><span><strong>Anotar algo pendiente para mañana</strong><small>Así no tengo que resolverlo ahora.</small></span></label><label class="check-row"><input type="checkbox" data-night="screen"><span><strong>Reducir estímulos antes de dormir</strong><small>Si me resulta útil, bajar las pantallas y el ruido.</small></span></label></div><p class="smalltext" id="vpNightStatus">Estas marcas se guardan en este dispositivo.</p></div>
+ <div class="section-head"><div><h3>Un cuento tranquilo antes de dormir</h3><p>Una lectura breve y serena. Podés leerla o escucharla si elegiste voz.</p></div></div>
+ <article class="card vp-bedtime-story"><h4 id="vpStoryTitle">La luz de la ventana</h4><p id="vpStoryText">Al caer la tarde, una luz tibia entraba por la ventana. Afuera, los árboles se movían despacito con la brisa. No había nada que resolver en ese instante: solo sentir el apoyo de la cama, escuchar el silencio y dejar que el día terminara. Mañana traería sus propias horas y sus pequeñas posibilidades. Por ahora, alcanzaba con descansar, respirar naturalmente y darse permiso para ir más lento.</p><div class="actions"><button class="btn primary" id="vpStoryPlay">🔊 Escuchar cuento</button><button class="btn outline" id="vpStoryStop">■ Detener lectura</button></div><p class="vp-subtle" id="vpStoryStatus">La lectura utiliza la voz disponible en este dispositivo.</p></article>
+ <article class="card tone-lav" style="margin:14px 0"><div class="card-ico">💚</div><h4>Una reflexión para hoy</h4><p id="vpDailyReflection">No hace falta resolver todo en un día. Elegí un paso pequeño que te haga bien y date permiso para descansar.</p></article>
+ <div class="section-head"><div><h3>Mis registros recientes</h3><p>Solo vos elegís si compartirlos o exportarlos.</p></div></div><div class="grid two"><div class="card"><h4>Ánimo</h4><div id="vpMoodList" class="vp-entry-list"></div></div><div class="card"><h4>Sueño</h4><div id="vpSleepList" class="vp-entry-list"></div></div></div>
+</section>
+<section class="view" id="view-social">
+ <div class="vp-feature-hero"><div class="eyebrow">Vínculos · Propósito · Disfrute</div><h3>Hay muchas maneras de disfrutar el día.</h3><p>Tu vida social puede ser una charla, una actividad nueva, volver a un pasatiempo o compartir recuerdos. Elegí lo que se parezca a vos.</p></div>
+ <div class="grid cards">
+  <article class="card tone-sky"><div class="card-ico">☎️</div><h4>Una charla que quiero tener</h4><p>Pensá en alguien con quien te gustaría hablar, aunque sea unos minutos.</p><button class="go" data-vp-social="llamar">Elegir esta idea →</button></article>
+  <article class="card tone-lav"><div class="card-ico">🎨</div><h4>Volver a un pasatiempo</h4><p>Música, tejido, lectura, plantas, cocina, dibujo, rompecabezas o aprender algo nuevo.</p><button class="go" data-vp-social="pasatiempo">Elegir esta idea →</button></article>
+  <article class="card tone-gold"><div class="card-ico">📸</div><h4>Compartir recuerdos</h4><p>Mirar fotos, contar una anécdota o escuchar una canción que te traiga buenos recuerdos.</p><button class="go" data-vp-social="recuerdos">Elegir esta idea →</button></article>
+  <article class="card tone-coral"><div class="card-ico">🚶</div><h4>Una salida o actividad</h4><p>Según tus posibilidades, considerar un paseo seguro, una biblioteca, un taller o una actividad comunitaria.</p><button class="go" data-vp-social="salida">Elegir esta idea →</button></article>
+ </div>
+ <div class="section-head"><div><h3>Mi pequeño plan social</h3><p>No es una obligación ni una competencia. Lo importante es que te represente.</p></div></div>
+ <div class="grid two"><div class="card"><h4>Una idea para esta semana</h4><div class="list-check" id="vpSocialChecks"><label class="check-row"><input type="checkbox" data-social="call"><span><strong>Contactar a alguien con quien disfruto conversar</strong></span></label><label class="check-row"><input type="checkbox" data-social="hobby"><span><strong>Dedicar tiempo a un pasatiempo</strong></span></label><label class="check-row"><input type="checkbox" data-social="new"><span><strong>Probar una actividad diferente</strong></span></label><label class="check-row"><input type="checkbox" data-social="memory"><span><strong>Compartir una foto, recuerdo o canción</strong></span></label></div><p class="smalltext">Las marcas se guardan localmente durante la semana.</p></div>
+  <div class="card"><h4>Mis actividades favoritas</h4><p class="vp-subtle">Anotá qué cosas disfrutás para tener ideas a mano cuando no sabés qué hacer.</p><div class="field" style="margin-top:12px"><label for="vpSocialNote">Mis gustos, lugares y actividades</label><textarea id="vpSocialNote" rows="7" placeholder="Ej. escuchar tango, regar las plantas, ir a la plaza, llamar a una amiga…"></textarea></div><div class="actions"><button class="btn primary" id="vpSocialSave">Guardar mis ideas</button><button class="btn outline" id="vpSocialExport">Descargar mis ideas</button></div><p id="vpSocialStatus" class="smalltext"></p></div></div>
+</section>
+<section class="view" id="view-autonomia">
+ <div class="vp-feature-hero"><div class="eyebrow">Vida cotidiana · Independencia</div><h3>Una casa más cómoda, una rutina más tuya.</h3><p>Pequeñas revisiones que ayudan a organizar el día y reducir obstáculos. Marcá únicamente lo que corresponda a tu hogar.</p></div>
+ <div class="notice warning"><strong>Elegí con seguridad</strong>No te subas a sillas ni escaleras para revisar cosas. Si una tarea requiere esfuerzo, altura o te genera inestabilidad, dejala para otro momento o buscá ayuda.</div>
+ <div class="section-head"><div><h3>Revisión sencilla de mi casa</h3><p>Las marcas se reinician por día y se guardan en este dispositivo.</p></div><span class="pill" id="vpHomeCount">0 revisadas</span></div>
+ <div class="card"><div class="vp-check-grid" id="vpHomeChecks">
+  <label class="check-row"><input type="checkbox" data-home="path"><span><strong>Pasillos despejados</strong><small>Sin cables ni objetos en el camino.</small></span></label>
+  <label class="check-row"><input type="checkbox" data-home="rugs"><span><strong>Alfombras seguras</strong><small>Sin bordes levantados ni superficies que resbalen.</small></span></label>
+  <label class="check-row"><input type="checkbox" data-home="light"><span><strong>Buena iluminación</strong><small>Especialmente entre la cama y el baño.</small></span></label>
+  <label class="check-row"><input type="checkbox" data-home="bath"><span><strong>Baño con superficie antideslizante</strong><small>Revisá que el piso no esté mojado.</small></span></label>
+  <label class="check-row"><input type="checkbox" data-home="reach"><span><strong>Objetos frecuentes al alcance</strong><small>Sin necesidad de estirarte ni subirte a un banco.</small></span></label>
+  <label class="check-row"><input type="checkbox" data-home="phone"><span><strong>Teléfono cerca</strong><small>Que sea fácil pedir ayuda si la necesitás.</small></span></label>
+  <label class="check-row"><input type="checkbox" data-home="shoes"><span><strong>Calzado firme y cómodo</strong><small>Que sujete bien el pie.</small></span></label>
+  <label class="check-row"><input type="checkbox" data-home="stairs"><span><strong>Escaleras despejadas</strong><small>Con buena luz y pasamanos si corresponde.</small></span></label>
+ </div><div class="actions"><button class="btn outline" id="vpHomeReset">Reiniciar marcas de hoy</button><button class="btn outline" id="vpHomeExport">Descargar mi lista</button></div></div>
+ <div class="section-head"><div><h3>Mi rutina a mi manera</h3><p>Elegí tareas cotidianas que te hagan sentir organizado/a, sin exigirte completar todo.</p></div></div>
+ <div class="card"><div class="vp-check-grid" id="vpRoutineChecks">
+  <label class="check-row"><input type="checkbox" data-routine="keys"><span><strong>Dejar llaves, anteojos y teléfono en su lugar</strong></span></label>
+  <label class="check-row"><input type="checkbox" data-routine="calendar"><span><strong>Revisar la agenda del día</strong></span></label>
+  <label class="check-row"><input type="checkbox" data-routine="food"><span><strong>Planear qué voy a comer</strong><small>Seguí las indicaciones alimentarias que tengas.</small></span></label>
+  <label class="check-row"><input type="checkbox" data-routine="movement"><span><strong>Elegir un movimiento adecuado para mí</strong></span></label>
+  <label class="check-row"><input type="checkbox" data-routine="rest"><span><strong>Reservar un momento de descanso</strong></span></label>
+  <label class="check-row"><input type="checkbox" data-routine="enjoy"><span><strong>Hacer algo que disfruto</strong></span></label>
+ </div></div>
+</section>
+<section class="view" id="view-informacion">
+ <div class="vp-feature-hero"><div class="eyebrow">Información práctica</div><h3>Respuestas sencillas para decisiones cotidianas.</h3><p>Consejos generales y fuentes fiables para saber qué conversar con un profesional. Cada persona tiene necesidades diferentes.</p></div>
+ <div class="grid cards">
+  <article class="card tone-sky"><div class="card-ico">🥗</div><h4>Alimentación e hidratación</h4><p>Priorizar una alimentación variada y seguir las pautas particulares recibidas. No existe una cantidad única de líquidos adecuada para todo el mundo.</p><a href="https://medlineplus.gov/spanish/healthyaging.html" target="_blank" rel="noopener">Leer en MedlinePlus ↗</a></article>
+  <article class="card tone-lav"><div class="card-ico">👓</div><h4>Vista y audición</h4><p>Los cambios nuevos merecen una consulta. Buena iluminación y anteojos o audífonos indicados pueden facilitar las actividades cotidianas.</p><a href="https://medlineplus.gov/spanish/" target="_blank" rel="noopener">Buscar información en español ↗</a></article>
+  <article class="card tone-gold"><div class="card-ico">🧼</div><h4>Cuidado personal</h4><p>Prepará con tiempo los elementos de higiene, elegí superficies seguras y evitá apurarte. Si una tarea resulta difícil, buscá una alternativa segura.</p><button class="go" data-vp-go="autonomia">Revisar la casa →</button></article>
+  <article class="card tone-coral"><div class="card-ico">🛡️</div><h4>Estafas y seguridad digital</h4><p>No compartas códigos de verificación, contraseñas ni datos bancarios por mensajes inesperados. Verificá cualquier pedido urgente por otro canal conocido.</p><a href="https://www.argentina.gob.ar/justicia/convosenlaweb" target="_blank" rel="noopener">Consejos de seguridad digital ↗</a></article>
+  <article class="card"><div class="card-ico">🏠</div><h4>Prevenir tropiezos y caídas</h4><p>Despejá caminos, asegurá alfombras, mejorá la iluminación y mantené objetos frecuentes al alcance. Consultá si sufrís caídas o mareos.</p><a href="https://medlineplus.gov/spanish/ency/patientinstructions/000052.htm" target="_blank" rel="noopener">Guía de prevención ↗</a></article>
+  <article class="card"><div class="card-ico">🩺</div><h4>Cuándo buscar ayuda</h4><p>Esta app no diagnostica. Ante dificultad para respirar, dolor intenso de pecho, signos repentinos de ACV o confusión repentina, buscá atención de emergencia.</p><button class="go" data-vp-go="consulta">Preparar una consulta →</button></article>
+ </div>
+ <div class="notice"><strong>Información revisada versus búsqueda externa</strong>Estas fichas ofrecen orientación general. Las búsquedas de internet pueden incluir contenido no revisado por Vida Plena; no cambies medicamentos ni tratamientos por tu cuenta.</div>
+</section>
+<section class="view" id="view-busqueda">
+ <div class="vp-feature-hero"><div class="eyebrow">Búsqueda externa · Con conexión a internet</div><h3>¿Te surgió una duda que la app no responde?</h3><p>Escribí tu pregunta y abrí una búsqueda en internet. No necesitás una API ni un servidor pago: la búsqueda se realiza directamente en tu navegador.</p></div>
+ <div class="vp-search-panel"><form id="vpSearchForm"><div class="field"><label for="vpSearchQuery">¿Qué querés buscar?</label><input id="vpSearchQuery" type="search" required minlength="2" maxlength="250" placeholder="Ej. cómo organizar mis turnos médicos" autocomplete="off"></div><div class="field" style="margin-top:12px"><label for="vpSearchEngine">Buscador</label><select id="vpSearchEngine"><option value="google">Google</option><option value="duck">DuckDuckGo</option></select></div><div class="vp-search-warning" id="vpSearchWarning"></div><div class="actions"><button class="btn primary" type="submit">🔎 Buscar en internet</button><button class="btn outline" type="button" id="vpSearchClear">Borrar pregunta</button></div></form><p class="vp-subtle" style="margin-top:14px">La búsqueda abre otra pestaña. Vida Plena no lee ni verifica automáticamente los resultados que aparezcan.</p></div>
+ <div class="notice warning"><strong>Protegé tu privacidad</strong>No incluyas nombres completos, direcciones, contraseñas, documentos, números de tarjeta ni otros datos personales en la búsqueda.</div>
+ <div class="notice danger"><strong>Si puede ser una urgencia, no esperes al buscador</strong>Ante dificultad para respirar, dolor intenso en el pecho, debilidad repentina de un lado, dificultad súbita para hablar, desmayo o confusión repentina, contactá a emergencias de tu localidad.</div>
+</section>
+<section class="view" id="view-asistente">
+ <div class="vp-feature-hero"><div class="eyebrow">Acompañamiento opcional</div><h3>¿Qué necesitás hoy?</h3><p>Elegí una opción y Vida Plena te lleva a una herramienta. No hace falta usar el asistente si preferís entrar directamente a tus secciones.</p></div>
+ <button class="vp-assistant-choice" data-vp-go="bienestar"><span>🌿</span><div><strong>Necesito una pausa o bajar el ritmo</strong><small>Respiración, meditación, ánimo y sueño.</small></div></button>
+ <button class="vp-assistant-choice" data-vp-go="memoria"><span>🧩</span><div><strong>Quiero activar mi mente</strong><small>Juegos, palabras, secuencias, refranes y recuerdos.</small></div></button>
+ <button class="vp-assistant-choice" data-vp-go="agenda"><span>📅</span><div><strong>Quiero organizar el día</strong><small>Turnos, cumpleaños, compromisos y actividades.</small></div></button>
+ <button class="vp-assistant-choice" data-vp-go="autonomia"><span>🏠</span><div><strong>Quiero revisar mi rutina o mi casa</strong><small>Pequeños pasos para mantener mi autonomía.</small></div></button>
+ <button class="vp-assistant-choice" data-vp-go="consulta"><span>🩺</span><div><strong>Tengo una consulta médica que preparar</strong><small>Organizá preguntas, datos y medicamentos.</small></div></button>
+ <button class="vp-assistant-choice" data-vp-go="busqueda"><span>🔎</span><div><strong>Me surgió una duda que no está en la app</strong><small>Buscar en internet y revisar fuentes externas.</small></div></button>
+ <div class="actions"><button class="btn outline" data-vp-go="inicio">Volver a mis herramientas</button></div>
+</section>
+<section class="view" id="view-preferencias">
+ <div class="vp-feature-hero"><div class="eyebrow">Accesibilidad y experiencia personal</div><h3>Vida Plena se adapta a vos.</h3><p>Podés cambiar estas preferencias en cualquier momento. No cambian tus diarios ni borran tus registros.</p></div>
+ <div class="grid two"><article class="card"><h4>Tamaño de letra</h4><p>Elegí el tamaño que te resulte cómodo para leer.</p><div class="vp-pref-grid" style="margin-top:12px"><label class="vp-pref-choice"><input type="radio" name="vpFontPref" value="21"> Grande</label><label class="vp-pref-choice"><input type="radio" name="vpFontPref" value="24"> Muy grande</label><label class="vp-pref-choice"><input type="radio" name="vpFontPref" value="27"> Extra grande</label></div><p id="vpFontStatus" class="vp-status-line"></p></article>
+ <article class="card"><h4>Voz y escucha</h4><p>Elegí voz femenina, masculina o lectura sin voz.</p><div class="field" style="margin-top:12px"><label for="vpPrefVoice">Preferencia de voz</label><select id="vpPrefVoice"><option value="f">Voz femenina (si está disponible)</option><option value="m">Voz masculina (si está disponible)</option><option value="off">Sin voz, solo texto</option></select></div><div class="field" style="margin-top:12px"><label for="vpPrefAmbient">Ambiente de las meditaciones</label><select id="vpPrefAmbient"><option value="off">Sin fondo, solo voz o texto</option><option value="music">Ambiente musical suave generado</option><option value="nature">Sonido suave tipo lluvia generado</option></select></div><p class="vp-status-line">Los sonidos se generan en el dispositivo; no son grabaciones ni música descargada.</p></article></div>
+ <div class="card" style="margin-top:14px"><h4>Cómo querés empezar cuando abrís la app</h4><div class="list-check" style="margin-top:12px"><label class="check-row"><input type="radio" name="vpLaunchPref" value="tools"><span><strong>Ir directamente a mis herramientas</strong><small>Entrar al inicio habitual.</small></span></label><label class="check-row"><input type="radio" name="vpLaunchPref" value="choose"><span><strong>Elegir qué necesito hoy</strong><small>Abrir el menú de orientación opcional.</small></span></label><label class="check-row"><input type="radio" name="vpLaunchPref" value="guide"><span><strong>Que una guía me acompañe</strong><small>Abrir la pantalla de acompañamiento con opciones paso a paso.</small></span></label></div><div class="list-check" style="margin-top:10px"><label class="check-row"><input type="checkbox" id="vpAskStart"><span><strong>Preguntarme cada vez que abro Vida Plena</strong><small>Si no lo marcás, se recordará tu preferencia y no se abrirá esta pantalla de configuración cada vez.</small></span></label><label class="check-row"><input type="checkbox" id="vpShowAssistant"><span><strong>Mostrar el acceso al asistente opcional en Inicio</strong><small>Podés seguir usando todas las secciones aunque lo desactives.</small></span></label></div><div class="actions"><button class="btn primary" id="vpSavePrefs">Guardar preferencias</button><button class="btn outline" id="vpRelaunchSetup">Volver a elegir al abrir</button></div><p id="vpPrefsStatus" class="vp-status-line"></p></div>
+ <div class="card" style="margin-top:14px"><h4>Privacidad y copia de tus datos</h4><p>Los datos personales de estas nuevas secciones se guardan localmente en tu navegador. Exportá una copia antes de cambiar de dispositivo o borrar los datos del navegador.</p><div class="actions"><button class="btn outline" id="vpExportAll">Descargar copia de mis nuevas secciones</button><button class="btn outline" id="vpPrintPrefs">Imprimir esta página</button></div></div>
+</section>
+<section class="view" id="view-mas">
+ <div class="vp-feature-hero"><div class="eyebrow">Tu espacio, tus decisiones</div><h3>Más herramientas para vivir a tu ritmo.</h3><p>Entrá a cada sección cuando la necesites. No tenés que completar todo ni usar cada herramienta.</p></div>
+ <div class="grid cards">
+  <article class="card"><div class="card-ico">📅</div><h4>Agenda y compromisos</h4><p>Turnos, cumpleaños y fechas importantes.</p><button class="go" data-vp-go="agenda">Abrir agenda →</button></article>
+  <article class="card tone-lav"><div class="card-ico">🌙</div><h4>Sueño y bienestar emocional</h4><p>Registros privados, rutina nocturna y pausas de calma.</p><button class="go" data-vp-go="bienestar">Abrir bienestar →</button></article>
+  <article class="card tone-sky"><div class="card-ico">🤝</div><h4>Vida social y pasatiempos</h4><p>Ideas para cuidar vínculos y dedicar tiempo a lo que disfrutás.</p><button class="go" data-vp-go="social">Explorar ideas →</button></article>
+  <article class="card tone-gold"><div class="card-ico">🏠</div><h4>Autonomía en casa</h4><p>Checklist del hogar y pequeñas rutinas de organización.</p><button class="go" data-vp-go="autonomia">Revisar mi casa →</button></article>
+  <article class="card tone-coral"><div class="card-ico">📚</div><h4>Información práctica</h4><p>Orientación sobre autocuidado, seguridad digital y prevención de caídas.</p><button class="go" data-vp-go="informacion">Consultar guías →</button></article>
+  <article class="card"><div class="card-ico">🔎</div><h4>Buscar en internet</h4><p>Para dudas repentinas que no estén respondidas dentro de la app.</p><button class="go" data-vp-go="busqueda">Buscar una duda →</button></article>
+  <article class="card tone-lav"><div class="card-ico">🧭</div><h4>Guía paso a paso (opcional)</h4><p>Elegí qué necesitás y te llevamos a la herramienta adecuada.</p><button class="go" data-vp-go="asistente">Abrir asistente →</button></article>
+  <article class="card tone-sky"><div class="card-ico">⚙️</div><h4>Mis preferencias</h4><p>Tamaño de letra, voz, sonido y experiencia de entrada.</p><button class="go" data-vp-go="preferencias">Personalizar →</button></article>
+  <article class="card tone-gold"><div class="card-ico">♫</div><h4>Meditaciones y relajación</h4><p>Escuchá una guía, usá sonidos suaves opcionales o leé en silencio.</p><button class="go" data-vp-go="meditaciones">Ir a la calma →</button></article>
+ </div>
+ <div class="notice"><strong>Actualizaciones de contenido</strong><span id="vpUpdateStatus">Se comprobará si hay guías nuevas cuando haya conexión a internet.</span> La aplicación seguirá usando el contenido incorporado si no puede conectarse.</div>
+</section>`;
+main.querySelector('.footer').insertAdjacentHTML('beforebegin',newViews);
+
+// Sidebar: keep the most used additions visible; the other sections remain under “Más herramientas”.
+const sn=$('sideNav');if(sn){sn.insertAdjacentHTML('beforeend','<button data-vp-view="agenda"><span class="ico">📅</span>Agenda</button><button data-vp-view="bienestar"><span class="ico">🌙</span>Sueño y emociones</button><button data-vp-view="autonomia"><span class="ico">🏠</span>Vida diaria</button><button data-vp-view="mas"><span class="ico">＋</span>Más herramientas</button>')}
+const mn=$('mobileNav');if(mn)mn.insertAdjacentHTML('beforeend','<button data-vp-view="mas"><span>＋</span>Más</button>');
+const tools=document.querySelector('.topbar .tools');if(tools&&!$('vpSearchTop')){const b=document.createElement('button');b.className='iconbtn textbtn';b.id='vpSearchTop';b.textContent='🔎 Buscar';b.title='Buscar una duda en internet';b.addEventListener('click',()=>vpShowView('busqueda'));tools.insertBefore(b,tools.firstChild)}
+// Quick start is additive: the original homepage cards and daily plan remain untouched.
+$('view-inicio').querySelector('.hero').insertAdjacentHTML('afterend',`<div class="vp-quickstart"><div class="vp-kicker">Tu momento, tu elección</div><h3>¿Qué necesitás hoy?</h3><p>Entrá directamente a tus herramientas o pedí una orientación opcional para elegir por dónde empezar.</p><div class="vp-quick-buttons"><button class="btn primary" data-vp-go="asistente">🧭 Elegir qué necesito</button><button class="btn outline" data-vp-go="agenda">📅 Organizar mi día</button><button class="btn outline" data-vp-go="bienestar">🌿 Tomarme una pausa</button><button class="btn outline" data-vp-go="preferencias">⚙️ Mis preferencias</button></div><p id="vpDailyUpdate" class="vp-status-line">Un espacio para vivir a tu ritmo.</p></div>`);
+
+function vpShowView(id){if(!vpTitles[id]||!$('view-'+id))return;document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+id));document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===id));document.querySelectorAll('[data-vp-view]').forEach(b=>b.classList.toggle('active',b.dataset.vpView===id));$('pageTitle').textContent=vpTitles[id];window.scrollTo({top:0,behavior:'smooth'});if(id!=='meditaciones')vpStopAmbient();if(id==='busqueda')setTimeout(()=>$('vpSearchQuery')?.focus({preventScroll:true}),250);}
+window.VidaPlenaGo=vpShowView;
+document.addEventListener('click',e=>{const g=e.target.closest('[data-vp-go]');if(g){vpShowView(g.dataset.vpGo);return}const n=e.target.closest('[data-vp-view]');if(n){vpShowView(n.dataset.vpView);return}const del=e.target.closest('[data-vp-del]');if(del){const [kind,index]=del.dataset.vpDel.split(':');vpDelete(kind,Number(index));}});
+// The existing meditation link was created in the earlier version and uses data-view.
+document.querySelectorAll('[data-view="meditaciones"],[data-view="guiado"],[data-view="juegos2"]').forEach(b=>b.addEventListener('click',()=>vpShowView(b.dataset.view)));
+
+// ---------- Agenda and export ----------
+const agForm=$('vpAgendaForm');$('vpAgDate').value=vpToday();
+function vpRenderAgenda(){const list=$('vpAgList');const a=[...vpData.agenda].map((x,i)=>({...x,_i:i})).sort((x,y)=>(x.date+x.time).localeCompare(y.date+y.time));$('vpAgCount').textContent=a.length?`${a.length} fecha(s) guardada(s).`:'Todavía no hay fechas guardadas.';list.innerHTML=a.length?a.map(x=>`<article class="vp-record"><div><div class="meta">${vpEsc(x.type)} · ${vpEsc(x.date)}${x.time?' · '+vpEsc(x.time):''}</div><h4>${vpEsc(x.title)}</h4>${x.note?`<p>${vpEsc(x.note)}</p>`:''}</div><button class="entry delete" data-vp-del="agenda:${x._i}" aria-label="Eliminar fecha">×</button></article>`).join(''):'<div class="empty">Tus próximas fechas aparecerán acá.</div>'}
+agForm.addEventListener('submit',e=>{e.preventDefault();vpData.agenda.push({title:$('vpAgTitle').value.trim(),type:$('vpAgType').value,date:$('vpAgDate').value,time:$('vpAgTime').value,note:$('vpAgNote').value.trim()});vpSave();vpRenderAgenda();agForm.reset();$('vpAgDate').value=vpToday();vpToast('Fecha guardada en este dispositivo.')});
+function vpDownload(name,txt,type='text/plain;charset=utf-8'){const blob=new Blob([txt],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function vpICSescape(s){return String(s||'').replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/[,;]/g,'\\$&')}
+$('vpAgICS').addEventListener('click',()=>{if(!vpData.agenda.length){vpToast('Agregá al menos una fecha antes de exportar.');return}const stamp=new Date().toISOString().replace(/[-:]|\.\d+/g,'');const events=vpData.agenda.map((x,i)=>{const d=(x.date||vpToday()).replace(/-/g,'');const tm=(x.time||'09:00').replace(':','')+'00';const end=new Date(`${x.date||vpToday()}T${x.time||'09:00'}:00`);end.setMinutes(end.getMinutes()+30);const ed=end.getFullYear()+String(end.getMonth()+1).padStart(2,'0')+String(end.getDate()).padStart(2,'0')+'T'+String(end.getHours()).padStart(2,'0')+String(end.getMinutes()).padStart(2,'0')+'00';const rec=x.type==='Cumpleaños'?'RRULE:FREQ=YEARLY\r\n':'';return `BEGIN:VEVENT\r\nUID:vp-ag-${i}-${stamp}@vidaplena\r\nDTSTAMP:${stamp}\r\nDTSTART:${d}T${tm}\r\nDTEND:${ed}\r\n${rec}SUMMARY:${vpICSescape(x.title)}\r\nDESCRIPTION:${vpICSescape(x.type+'. '+(x.note||''))}\r\nEND:VEVENT`}).join('\r\n');vpDownload('agenda-vida-plena.ics',`BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Vida Plena//ES\r\nCALSCALE:GREGORIAN\r\n${events}\r\nEND:VCALENDAR`,'text/calendar;charset=utf-8');vpToast('Archivo listo. Abrilo y agregá las fechas a tu calendario.')});
+$('vpAgPrint').addEventListener('click',()=>window.print());
+
+// ---------- Mood/sleep diaries ----------
+$('vpMoodDate').value=vpToday();$('vpSleepDate').value=vpToday();
+function vpRenderLog(kind,target){const rows=vpData[kind]||[];$(target).innerHTML=rows.length?[...rows].slice(-6).reverse().map((x,j)=>{const i=rows.length-1-j;const title=kind==='mood'?`${x.mood} · tensión ${x.stress}/10`:`Descanso: ${x.quality}`;const detail=kind==='mood'?`Me podría ayudar: ${x.help}${x.note?'\n'+x.note:''}`:`Acostarme: ${x.bed||'sin anotar'} · Levantarme: ${x.wake||'sin anotar'} · Despertares: ${x.awakenings||'sin anotar'} · Siesta: ${x.nap}${x.note?'\n'+x.note:''}`;return `<article class="vp-record"><div><div class="meta">${vpEsc(x.date)}</div><h4>${vpEsc(title)}</h4><p>${vpEsc(detail)}</p></div><button class="entry delete" data-vp-del="${kind}:${i}" aria-label="Eliminar registro">×</button></article>`}).join(''):'<div class="empty">Todavía no hay registros. Podés empezar cuando quieras.</div>'}
+$('vpMoodForm').addEventListener('submit',e=>{e.preventDefault();vpData.mood.push({date:$('vpMoodDate').value,mood:$('vpMood').value,stress:$('vpStress').value,help:$('vpHelp').value,note:$('vpMoodNote').value.trim()});vpSave();vpRenderLog('mood','vpMoodList');e.target.reset();$('vpMoodDate').value=vpToday();$('vpStress').value=3;vpToast('Registro de ánimo guardado.')});
+$('vpSleepForm').addEventListener('submit',e=>{e.preventDefault();vpData.sleep.push({date:$('vpSleepDate').value,quality:$('vpSleepQuality').value,bed:$('vpBedTime').value,wake:$('vpWakeTime').value,awakenings:$('vpAwakenings').value,nap:$('vpNap').value,note:$('vpSleepNote').value.trim()});vpSave();vpRenderLog('sleep','vpSleepList');e.target.reset();$('vpSleepDate').value=vpToday();vpToast('Registro del sueño guardado.')});
+$('vpMoodExport').onclick=()=>vpDownload('diario-animo-vida-plena.json',JSON.stringify(vpData.mood,null,2),'application/json');$('vpSleepExport').onclick=()=>vpDownload('diario-sueno-vida-plena.json',JSON.stringify(vpData.sleep,null,2),'application/json');
+const night=()=>{document.querySelectorAll('[data-night]').forEach(i=>{i.checked=!!((vpData.night||{})[i.dataset.night]);i.onchange=()=>{vpData.night=vpData.night||{};vpData.night[i.dataset.night]=i.checked;vpSave()}})};
+
+// ---------- Social connection and activities ----------
+$('vpSocialNote').value=vpData.socialNote||'';$('vpSocialSave').onclick=()=>{vpData.socialNote=$('vpSocialNote').value;vpSave();$('vpSocialStatus').textContent='Tus ideas quedaron guardadas en este dispositivo.'};
+$('vpSocialExport').onclick=()=>vpDownload('mis-actividades-vida-plena.txt',vpData.socialNote||'Todavía no hay ideas guardadas.');
+document.querySelectorAll('[data-social]').forEach(i=>{i.checked=!!(vpData.socialChecks||{})[i.dataset.social];i.addEventListener('change',()=>{vpData.socialChecks=vpData.socialChecks||{};vpData.socialChecks[i.dataset.social]=i.checked;vpSave()})});
+document.querySelectorAll('[data-vp-social]').forEach(b=>b.addEventListener('click',()=>{const ideas={llamar:'Quiero hablar con alguien. Podría elegir una persona y proponer una charla breve.',pasatiempo:'Quiero reservar un momento para un pasatiempo que disfruto.',recuerdos:'Quiero compartir una canción, foto o recuerdo.',salida:'Quiero pensar en una actividad segura que me gustaría hacer.'};$('vpSocialNote').value=($('vpSocialNote').value?$('vpSocialNote').value+'\n\n':'')+ideas[b.dataset.vpSocial];vpData.socialNote=$('vpSocialNote').value;vpSave();$('vpSocialStatus').textContent='Idea agregada a tus notas.';vpShowView('social')}));
+
+// ---------- Home autonomy checklist ----------
+function vpInitDailyHome(){if(vpData.homeDate!==vpToday()){vpData.homeDate=vpToday();vpData.homeChecks={};vpData.routineChecks={};vpSave()}document.querySelectorAll('[data-home]').forEach(i=>{i.checked=!!(vpData.homeChecks||{})[i.dataset.home];i.onchange=()=>{vpData.homeChecks[i.dataset.home]=i.checked;vpSave();vpHomeCount()}});document.querySelectorAll('[data-routine]').forEach(i=>{i.checked=!!(vpData.routineChecks||{})[i.dataset.routine];i.onchange=()=>{vpData.routineChecks[i.dataset.routine]=i.checked;vpSave()}});vpHomeCount()}
+function vpHomeCount(){const c=[...document.querySelectorAll('[data-home]')].filter(x=>x.checked).length;$('vpHomeCount').textContent=`${c} de ${document.querySelectorAll('[data-home]').length} revisadas`}
+$('vpHomeReset').onclick=()=>{vpData.homeDate=vpToday();vpData.homeChecks={};vpData.routineChecks={};vpSave();vpInitDailyHome();vpToast('Marcas de hoy reiniciadas.')};
+$('vpHomeExport').onclick=()=>{const names=[...document.querySelectorAll('[data-home]')].map(x=>`${x.checked?'[x]':'[ ]'} ${x.closest('label').innerText.trim()}`);vpDownload('lista-casa-segura.txt',`Fecha: ${vpToday()}\n\n${names.join('\n')}`)};
+
+// ---------- Internet search with guardrails ----------
+const searchField=$('vpSearchQuery'),searchWarning=$('vpSearchWarning');
+function vpWarnSearch(){const q=searchField.value.toLowerCase();let m='';if(/dolor (en el|de) pecho|no puedo respirar|dificultad para respirar|cara ca[ií]da|debilidad (repentina|de un lado)|no puedo hablar|confusi[oó]n repentina|desmayo|signos de acv|accidente cerebrovascular/.test(q)){m='La consulta puede describir una urgencia. No esperes resultados de internet: contactá de inmediato a emergencias de tu localidad.'}else if(/dosis|duplicar|suspender|dejar de tomar|mezclar medicamentos|pastillas|medicaci[oó]n|remedio|tratamiento|contraindicaci[oó]n/.test(q)){m='Para dosis o cambios de medicación, no te guíes solo por buscadores. Confirmá la indicación con tu médico o farmacéutico.'}else if(/suicid|hacerme da[nñ]o|no quiero vivir/.test(q)){m='Si esto describe cómo te sentís ahora y estás en peligro, buscá ayuda urgente y avisale a una persona de confianza en este momento.'}
+ searchWarning.textContent=m;searchWarning.classList.toggle('show',!!m)}
+searchField.addEventListener('input',vpWarnSearch);
+$('vpSearchForm').addEventListener('submit',e=>{e.preventDefault();const q=searchField.value.trim();if(q.length<2)return;vpWarnSearch();const engine=$('vpSearchEngine').value;const url=engine==='duck'?'https://duckduckgo.com/?q='+encodeURIComponent(q):'https://www.google.com/search?q='+encodeURIComponent(q);window.open(url,'_blank','noopener,noreferrer');});
+$('vpSearchClear').onclick=()=>{searchField.value='';vpWarnSearch();searchField.focus()};
+
+// ---------- Optional bedtime story, using only the device speech engine ----------
+let vpStoryUtterance=null;
+function vpStoryStop(){if('speechSynthesis'in window)speechSynthesis.cancel();vpStoryUtterance=null;if($('vpStoryStatus'))$('vpStoryStatus').textContent='Lectura detenida. Podés seguir leyendo el texto en pantalla.'}
+$('vpStoryPlay')?.addEventListener('click',()=>{if(vpData.preferences.voice==='off'){vpStoryStop();$('vpStoryStatus').textContent='Elegiste sin voz. El cuento queda disponible para leer en pantalla.';return;}if(!('speechSynthesis'in window)||typeof SpeechSynthesisUtterance==='undefined'){$('vpStoryStatus').textContent='La voz no está disponible en este navegador. Podés leer el cuento en pantalla.';return;}speechSynthesis.cancel();vpStoryUtterance=new SpeechSynthesisUtterance($('vpStoryText').innerText);vpStoryUtterance.lang='es-AR';vpStoryUtterance.rate=.82;const voices=speechSynthesis.getVoices().filter(v=>/^es/i.test(v.lang));const pref=vpData.preferences.voice;const names=pref==='f'?/female|mujer|woman|paulina|monica|helena|luciana|sofia|sabina|elena|laura|camila/i:pref==='m'?/male|hombre|man|jorge|diego|pablo|carlos|raul|andres|juan/i:null;const picked=names?voices.find(v=>names.test(v.name)):null;if(picked)vpStoryUtterance.voice=picked;vpStoryUtterance.onend=()=>{$('vpStoryStatus').textContent='Terminó el cuento. Podés quedarte unos instantes en calma.'};speechSynthesis.speak(vpStoryUtterance);$('vpStoryStatus').textContent='Reproduciendo la lectura. Podés detenerla cuando quieras.';});
+$('vpStoryStop')?.addEventListener('click',vpStoryStop);
+
+// ---------- Memory extensions in the existing extra-games view ----------
+const memoryMarkup=String.raw`<div class="section-head"><div><h3>Recuerdos, música y cultura</h3><p>Otras maneras de activar la memoria, sin presión por acertar.</p></div></div><div class="grid two"><article class="card"><div class="card-ico">💭</div><h4>Un recuerdo para explorar</h4><p id="vpMemoryPrompt">¿Qué canción te lleva a una etapa especial de tu vida?</p><div class="actions"><button class="btn outline" id="vpMemoryNext">Otra pregunta</button><button class="btn outline" id="vpMemoryMusic">Buscar canciones de mi época</button></div><div class="field" style="margin-top:12px"><label for="vpMemoryNote">Mis recuerdos o ideas</label><textarea id="vpMemoryNote" rows="4" placeholder="Podés escribir una historia, una receta o un recuerdo…"></textarea></div><div class="actions"><button class="btn primary" id="vpMemorySave">Guardar nota</button></div><p id="vpMemoryStatus" class="smalltext"></p></article><article class="card"><div class="card-ico">📚</div><h4>Cultura general, a mi ritmo</h4><p id="vpCultureQuestion">¿Cuál es la capital de la Argentina?</p><div id="vpCultureOptions"></div><p id="vpCultureFeedback" aria-live="polite" class="smalltext"></p><button class="btn outline" id="vpCultureNext">Otra pregunta</button></article></div>`;
+const gameView=$('view-juegos2');if(gameView)gameView.insertAdjacentHTML('beforeend',memoryMarkup);else $('view-memoria').insertAdjacentHTML('beforeend',memoryMarkup);
+const builtMemory=['¿Qué canción te lleva a una etapa especial de tu vida?','¿Qué comida te recuerda a tu infancia o a una persona querida?','¿Qué lugar te gustaría volver a visitar?','¿Qué oficio o actividad aprendiste con los años?','¿Qué consejo valioso te dio alguien alguna vez?','¿Qué fiesta o reunión familiar recordás con cariño?','¿Qué libro, película o programa disfrutabas?','¿Qué pequeño logro personal te da orgullo?'];let vpMemoryPrompts=[...builtMemory],vpMemIdx=0;
+const culture=[{q:'¿Cuál es la capital de la Argentina?',opts:['Córdoba','Buenos Aires','Rosario','Mendoza'],a:'Buenos Aires',why:'Buenos Aires es la capital de la Argentina.'},{q:'¿Cuántos meses tiene un año?',opts:['10','11','12','13'],a:'12',why:'Un año calendario tiene doce meses.'},{q:'¿Qué instrumento suele tener teclas blancas y negras?',opts:['Piano','Tambor','Flauta','Guitarra'],a:'Piano',why:'El piano tiene teclas blancas y negras.'},{q:'¿Qué estación viene después del invierno en Argentina?',opts:['Otoño','Primavera','Verano','Invierno'],a:'Primavera',why:'En el ciclo de estaciones, después del invierno llega la primavera.'},{q:'¿Qué río atraviesa la zona de Rosario?',opts:['Río Paraná','Río Colorado','Río Limay','Río Negro'],a:'Río Paraná',why:'Rosario está a orillas del río Paraná.'},{q:'¿Cuál de estos animales es un mamífero?',opts:['Delfín','Tortuga','Gallina','Trucha'],a:'Delfín',why:'El delfín es un mamífero que vive en el agua.'},{q:'¿Qué número sigue en la serie 2, 4, 6, 8…?',opts:['9','10','11','12'],a:'10',why:'La serie aumenta de dos en dos.'},{q:'¿Qué se usa para medir la temperatura?',opts:['Termómetro','Brújula','Regla','Reloj de arena'],a:'Termómetro',why:'El termómetro mide la temperatura.'}];let vpCultureIdx=0;
+function vpRenderMemoryPrompt(){if($('vpMemoryPrompt'))$('vpMemoryPrompt').textContent=vpMemoryPrompts[vpMemIdx%vpMemoryPrompts.length]}
+function vpRenderCulture(){if(!$('vpCultureQuestion'))return;const q=culture[vpCultureIdx%culture.length];$('vpCultureQuestion').textContent=q.q;$('vpCultureFeedback').textContent='Elegí una respuesta para ver una explicación sencilla.';$('vpCultureOptions').innerHTML=q.opts.map(o=>`<button class="btn outline vp-q" data-culture="${vpEsc(o)}">${vpEsc(o)}</button>`).join('');$('vpCultureOptions').querySelectorAll('[data-culture]').forEach(b=>b.onclick=()=>{$('vpCultureFeedback').textContent=b.dataset.culture===q.a?'¡Bien! '+q.why:'La respuesta es '+q.a+'. '+q.why;});}
+if($('vpMemoryNote'))$('vpMemoryNote').value=vpData.memoryNote||'';
+$('vpMemoryNext')?.addEventListener('click',()=>{vpMemIdx++;vpRenderMemoryPrompt()});$('vpMemorySave')?.addEventListener('click',()=>{vpData.memoryNote=$('vpMemoryNote').value;vpSave();$('vpMemoryStatus').textContent='Nota guardada solo en este dispositivo.'});$('vpMemoryMusic')?.addEventListener('click',()=>{const q=prompt('¿Qué artista, canción o época querés buscar? No escribas datos personales.','canciones argentinas de mi juventud');if(q)window.open('https://www.youtube.com/results?search_query='+encodeURIComponent(q),'_blank','noopener,noreferrer')});$('vpCultureNext')?.addEventListener('click',()=>{vpCultureIdx++;vpRenderCulture()});vpRenderMemoryPrompt();vpRenderCulture();
+
+// ---------- Preferences and first-run choice ----------
+function vpGetBaseExtra(){try{return JSON.parse(localStorage.getItem('vpExtra')||'{}')}catch(e){return {}}}
+function vpSetVoice(v){vpData.preferences.voice=v;vpSave();if(window.VPVoiceControl)window.VPVoiceControl.set(v);const sel=$('vpVoiceMode');if(sel){sel.value=v==='f'?'female':v==='m'?'male':'off';if(typeof window.vpFillVoices==='function')window.vpFillVoices();if(v==='off'&&'speechSynthesis'in window)speechSynthesis.cancel()}}
+function vpFont(n){n=Number(n);if(![21,24,27].includes(n))n=21;vpData.preferences.font=n;vpSave();document.documentElement.style.setProperty('--font',n+'px');try{const k='vidaPlenaDataV1',d=JSON.parse(localStorage.getItem(k)||'{}');d.settings=d.settings||{};d.settings.font=n;localStorage.setItem(k,JSON.stringify(d))}catch(e){}document.querySelectorAll('input[name="vpFontPref"]').forEach(i=>i.checked=Number(i.value)===n);if($('vpFontStatus'))$('vpFontStatus').textContent=`Tamaño aplicado: ${n}px. Podés ajustarlo otra vez cuando quieras.`}
+function vpAmbientPreference(v){vpData.preferences.ambient=v;vpSave();if($('vpAmbientChoice'))$('vpAmbientChoice').value=v;if($('vpPrefAmbient'))$('vpPrefAmbient').value=v}
+function vpApplyPreferences(){vpFont(vpData.preferences.font);vpSetVoice(vpData.preferences.voice);if($('vpPrefAmbient'))$('vpPrefAmbient').value=vpData.preferences.ambient;if($('vpAmbientChoice'))$('vpAmbientChoice').value=vpData.preferences.ambient;document.querySelectorAll('input[name="vpLaunchPref"]').forEach(i=>i.checked=i.value===vpData.preferences.launchMode);$('vpAskStart').checked=!!vpData.preferences.askOnStart;$('vpShowAssistant').checked=vpData.preferences.assistant!==false}
+document.querySelectorAll('input[name="vpFontPref"]').forEach(i=>i.addEventListener('change',()=>vpFont(i.value)));
+$('vpPrefVoice').value=vpData.preferences.voice;$('vpPrefVoice').addEventListener('change',()=>{vpSetVoice($('vpPrefVoice').value);vpToast('Preferencia de voz guardada.')});$('vpPrefAmbient').addEventListener('change',()=>{vpAmbientPreference($('vpPrefAmbient').value);vpToast('Ambiente preferido guardado.')});
+$('vpSavePrefs').addEventListener('click',()=>{const m=document.querySelector('input[name="vpLaunchPref"]:checked');vpData.preferences.launchMode=m?.value||'tools';vpData.preferences.askOnStart=$('vpAskStart').checked;vpData.preferences.assistant=$('vpShowAssistant').checked;vpData.preferences.voice=$('vpPrefVoice').value;vpData.preferences.ambient=$('vpPrefAmbient').value;vpSave();vpSetVoice(vpData.preferences.voice);vpAmbientPreference(vpData.preferences.ambient);document.querySelectorAll('#vpHomeAssistantCard').forEach(e=>e.style.display=vpData.preferences.assistant?'':'none');$('vpPrefsStatus').textContent='Preferencias guardadas. Tus registros se mantienen como estaban.';vpToast('Preferencias guardadas.')});
+$('vpRelaunchSetup').addEventListener('click',()=>{vpData.preferences.setupDone=false;vpSave();vpShowView('preferencias');window.showVPLaunchChooserIfNeeded?.(true)});
+$('vpExportAll').addEventListener('click',()=>vpDownload('copia-vida-plena-premium.json',JSON.stringify({agenda:vpData.agenda,mood:vpData.mood,sleep:vpData.sleep,socialNote:vpData.socialNote,memoryNote:vpData.memoryNote,homeChecks:vpData.homeChecks,preferences:vpData.preferences},null,2),'application/json'));
+$('vpPrintPrefs').addEventListener('click',()=>window.print());
+
+function showLaunchChooser(force=false){if(!force&&vpData.preferences.setupDone&&!vpData.preferences.askOnStart)return;if($('vpOv'))$('vpOv').remove();const h=`<div style="font-size:3.4rem">🌿</div><div class="eyebrow">Tu espacio personal</div><h1>Hagamos que Vida Plena sea cómoda para vos</h1><p>Elegí tu letra, la voz y cómo preferís empezar. Podés cambiarlo después.</p><div class="field" style="text-align:left;margin-top:14px"><label for="vpLaunchFont">Tamaño de letra</label><select id="vpLaunchFont"><option value="21">Grande</option><option value="24">Muy grande</option><option value="27">Extra grande</option></select></div><div class="field" style="text-align:left;margin-top:10px"><label for="vpLaunchVoice">Voz</label><select id="vpLaunchVoice"><option value="f">Preferentemente femenina</option><option value="m">Preferentemente masculina</option><option value="off">Sin voz, solo texto</option></select></div><div class="field" style="text-align:left;margin-top:10px"><label for="vpLaunchAmbient">Sonido en las meditaciones</label><select id="vpLaunchAmbient"><option value="off">Sin fondo</option><option value="music">Ambiente musical suave generado</option><option value="nature">Sonido suave tipo lluvia generado</option></select></div><div class="field" style="text-align:left;margin-top:10px"><label for="vpLaunchMode">¿Cómo querés empezar?</label><select id="vpLaunchMode"><option value="tools">Entrar a mis herramientas</option><option value="choose">Elegir qué necesito hoy</option><option value="guide">Que una guía me acompañe</option></select></div><label class="check-row" style="margin-top:12px;color:var(--ink);text-align:left"><input type="checkbox" id="vpLaunchAsk"><span><strong>Preguntarme cada vez que abro la app</strong><small>Podés dejarlo desmarcado para entrar sin pasos adicionales.</small></span></label><button class="btn primary full" id="vpLaunchContinue" style="margin-top:14px">Continuar a Vida Plena</button><p class="smalltext">La preferencia de voz depende de las voces disponibles en este dispositivo.</p>`;if(typeof window.VidaPlenaOverlay==='function')window.VidaPlenaOverlay(h);else{const o=document.createElement('div');o.id='vpOv';o.className='vp-ov';o.innerHTML='<div class="vp-box">'+h+'</div>';document.body.appendChild(o)}
+ $('vpLaunchFont').value=String(vpData.preferences.font||21);$('vpLaunchVoice').value=vpData.preferences.voice||'f';$('vpLaunchAmbient').value=vpData.preferences.ambient||'off';$('vpLaunchMode').value=vpData.preferences.launchMode||'tools';$('vpLaunchAsk').checked=!!vpData.preferences.askOnStart;
+ $('vpLaunchContinue').onclick=()=>{vpData.preferences.font=Number($('vpLaunchFont').value);vpData.preferences.voice=$('vpLaunchVoice').value;vpData.preferences.ambient=$('vpLaunchAmbient').value;vpData.preferences.launchMode=$('vpLaunchMode').value;vpData.preferences.askOnStart=$('vpLaunchAsk').checked;vpData.preferences.setupDone=true;vpSave();vpFont(vpData.preferences.font);vpSetVoice(vpData.preferences.voice);vpAmbientPreference(vpData.preferences.ambient);$('vpOv')?.remove();const mode=vpData.preferences.launchMode;vpShowView(mode==='tools'?'inicio':'asistente');if(mode==='guide')vpToast('Elegí una opción y Vida Plena te guiará a la sección correspondiente.');};}
+window.showVPLaunchChooserIfNeeded=(force=false)=>showLaunchChooser(force);
+// Expose only the overlay renderer needed by the first-run welcome button.
+window.VidaPlenaOverlay=h=>{let o=$('vpOv');if(!o){o=document.createElement('div');o.id='vpOv';o.className='vp-ov';document.body.appendChild(o)}o.innerHTML='<div class="vp-box">'+h+'</div>'};
+// If the app is opened as an installed app, there may be no original welcome overlay.
+setTimeout(()=>{if(!$('vpOv')&&(!vpData.preferences.setupDone||vpData.preferences.askOnStart))showLaunchChooser()},180);
+
+// ---------- Generated ambient sound, no external audio service required ----------
+let vpAudioCtx=null,vpAudioNodes=[],vpNoiseNode=null;
+function vpStopAmbient(){if(!vpAudioCtx)return;const ctx=vpAudioCtx;vpAudioNodes.forEach(n=>{try{n.stop?.()}catch(e){}try{n.disconnect?.()}catch(e){}});vpAudioNodes=[];vpNoiseNode=null;vpAudioCtx=null;try{ctx.close()}catch(e){}if($('vpAmbientStatus'))$('vpAmbientStatus').textContent='Sonido de fondo detenido.'}
+async function vpStartAmbient(){const mode=$('vpAmbientChoice')?.value||vpData.preferences.ambient;if(mode==='off'){vpStopAmbient();if($('vpAmbientStatus'))$('vpAmbientStatus').textContent='Modo sin sonido de fondo.';return}vpStopAmbient();const AC=window.AudioContext||window.webkitAudioContext;if(!AC){if($('vpAmbientStatus'))$('vpAmbientStatus').textContent='Este dispositivo no admite sonido generado. Podés continuar con la voz o el texto.';return}try{const ctx=new AC();vpAudioCtx=ctx;await ctx.resume();const master=ctx.createGain();master.gain.value=mode==='music'?.028:.09;master.connect(ctx.destination);vpAudioNodes.push(master);if(mode==='music'){[130.81,164.81,196,261.63].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.value=[.16,.13,.10,.055][i];o.connect(g);g.connect(master);o.start();vpAudioNodes.push(o,g)});$('vpAmbientStatus').textContent='Ambiente musical suave generado en este dispositivo.'}else{const len=ctx.sampleRate*3,buf=ctx.createBuffer(1,len,ctx.sampleRate),d=buf.getChannelData(0);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*.35;const src=ctx.createBufferSource(),filter=ctx.createBiquadFilter(),slow=ctx.createGain();src.buffer=buf;src.loop=true;filter.type='lowpass';filter.frequency.value=1050;slow.gain.value=.45;src.connect(filter);filter.connect(slow);slow.connect(master);src.start();vpAudioNodes.push(src,filter,slow);$('vpAmbientStatus').textContent='Sonido suave tipo lluvia generado en este dispositivo.'}}catch(e){vpStopAmbient();if($('vpAmbientStatus'))$('vpAmbientStatus').textContent='No se pudo iniciar el sonido. Probá nuevamente o elegí sin fondo.'}}
+if($('view-meditaciones')){$('vpMeditationPlayer').insertAdjacentHTML('beforebegin',`<div class="vp-ambient-card"><h4>Sonido de fondo (opcional)</h4><p class="vp-subtle">Elegí silencio, un ambiente musical suave o un sonido continuo tipo lluvia. No son grabaciones; se generan en tu dispositivo y podés detenerlos cuando quieras.</p><div class="field" style="margin-top:10px"><label for="vpAmbientChoice">Ambiente</label><select id="vpAmbientChoice"><option value="off">Sin fondo, solo voz o texto</option><option value="music">Ambiente musical suave generado</option><option value="nature">Sonido suave tipo lluvia generado</option></select></div><div class="actions"><button class="btn primary" id="vpAmbientStart">▶ Iniciar sonido</button><button class="btn outline" id="vpAmbientStop">■ Detener sonido</button></div><p class="vp-status-line" id="vpAmbientStatus">El sonido solo comienza cuando lo activás.</p></div>`);$('vpAmbientChoice').value=vpData.preferences.ambient||'off';$('vpAmbientStart').addEventListener('click',vpStartAmbient);$('vpAmbientStop').addEventListener('click',vpStopAmbient);$('vpAmbientChoice').addEventListener('change',()=>vpAmbientPreference($('vpAmbientChoice').value));$('vpVoiceMode')?.addEventListener('change',()=>{const v=$('vpVoiceMode').value;vpSetVoice(v==='female'?'f':v==='male'?'m':'off')})}
+
+// ---------- Daily living memory prompts and static-feed updates ----------
+vpApplyPreferences();vpRenderAgenda();vpRenderLog('mood','vpMoodList');vpRenderLog('sleep','vpSleepList');night();vpInitDailyHome();
+const vpContentUrl=()=>new URL('contenido-vida-plena.json',document.baseURI).toString();
+(async()=>{try{if(!navigator.onLine)throw new Error('offline');const r=await fetch(vpContentUrl()+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('no feed');const c=await r.json();if(c&&c.version&&c.version>=1){if(Array.isArray(c.memoryPrompts)&&c.memoryPrompts.length)vpMemoryPrompts=c.memoryPrompts.filter(x=>typeof x==='string'&&x.trim());if(c.tipOfDay){$('vpDailyUpdate').textContent=c.tipOfDay;$('vpDailyUpdate').setAttribute('aria-live','polite')}if(c.dailyReflection&&$('vpDailyReflection'))$('vpDailyReflection').textContent=String(c.dailyReflection).slice(0,500);if(c.bedtimeStory&&c.bedtimeStory.title&&c.bedtimeStory.text&&$('vpStoryTitle')&&$('vpStoryText')){$('vpStoryTitle').textContent=String(c.bedtimeStory.title).slice(0,120);$('vpStoryText').textContent=String(c.bedtimeStory.text).slice(0,2200)}if(Array.isArray(c.featuredResources)&&c.featuredResources.length){const valid=c.featuredResources.filter(x=>x.title&&x.text&&x.url&&/^https?:\/\//.test(x.url));if(valid.length){const section=$('view-informacion');section.insertAdjacentHTML('beforeend',`<div class="section-head"><div><h3>Recursos destacados</h3><p>Enlaces agregados desde el catálogo de contenido.</p></div></div><div class="grid two">${valid.map(x=>`<article class="vp-tip"><h4>${vpEsc(x.title)}</h4><p>${vpEsc(x.text)}</p><a href="${vpEsc(x.url)}" target="_blank" rel="noopener">Consultar recurso ↗</a></article>`).join('')}</div>`)}}vpMemIdx=0;vpRenderMemoryPrompt();vpData.updateDate=new Date().toISOString();vpSave();if($('vpUpdateStatus'))$('vpUpdateStatus').textContent='Hay conexión. Catálogo consultado: '+new Date().toLocaleString('es-AR')+'.';}else throw new Error('catalogo no valido')}catch(e){if($('vpUpdateStatus'))$('vpUpdateStatus').textContent='Sin una actualización online reciente; las herramientas incorporadas siguen disponibles.'}})();
+// Per-day optional launch and assistant settings, preserving the existing starting screen/licensing flow.
+const initialOverlay=$('vpOv');if(!initialOverlay&&vpData.preferences.setupDone&&vpData.preferences.askOnStart)setTimeout(()=>showLaunchChooser(),250);
+// Set the web-search shortcut and the initial view to work for both older and new nav structures.
+if(vpData.preferences.setupDone&&!vpData.preferences.askOnStart&&vpData.preferences.launchMode!=='tools'&&!initialOverlay){setTimeout(()=>vpShowView('asistente'),300)}
+// Restore local accent controls after clicking through the original install overlay.
+})();
+</script>
+</body>
 </html>

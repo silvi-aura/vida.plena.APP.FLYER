@@ -1,4 +1,5 @@
-const C='vida-plena-v1',F=['./','index.html','manifest.webmanifest'];
-self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(F))));
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!=C).map(x=>caches.delete(x))))));
-self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(C).then(x=>x.put(e.request,c));return r}).catch(()=>caches.match(e.request)))});
+const CACHE='vida-plena-premium-v5-codigo';
+const CORE=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./meditaciones.json','./contenido-vida-plena.json'];
+self.addEventListener('install',event=>{event.waitUntil((async()=>{const cache=await caches.open(CACHE);for(const url of CORE){try{const r=await fetch(url,{cache:'no-store'});if(r.ok)await cache.put(url,r.clone())}catch(e){}}await self.skipWaiting()})())});
+self.addEventListener('activate',event=>{event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k.startsWith('vida-plena-premium-')&&k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim()})())});
+self.addEventListener('fetch',event=>{const r=event.request;if(r.method!=='GET'||new URL(r.url).origin!==self.location.origin)return;event.respondWith((async()=>{const cache=await caches.open(CACHE);const url=new URL(r.url);const pathKey=new Request(url.origin+url.pathname,{method:'GET'});try{const fresh=await fetch(r);if(fresh&&fresh.ok){cache.put(r,fresh.clone()).catch(()=>{});cache.put(pathKey,fresh.clone()).catch(()=>{})}return fresh}catch(e){const saved=await cache.match(r)||await cache.match(pathKey);if(saved)return saved;throw e}})())});
