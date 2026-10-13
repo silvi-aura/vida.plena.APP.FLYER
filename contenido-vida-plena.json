@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "updatedAt": "2026-10-13",
+  "tipOfDay": "Elegí una sola cosa que te haga bien hoy. No hace falta completar todo; tu ritmo también importa.",
+  "memoryPrompts": [
+    "¿Qué canción te lleva a una etapa especial de tu vida?",
+    "¿Qué comida te recuerda a tu infancia o a una persona querida?",
+    "¿Qué lugar te gustaría volver a visitar?",
+    "¿Qué oficio o actividad aprendiste con los años?",
+    "¿Qué consejo valioso te dio alguien alguna vez?",
+    "¿Qué fiesta o reunión familiar recordás con cariño?",
+    "¿Qué libro, película o programa disfrutabas?",
+    "¿Qué pequeño logro personal te da orgullo?",
+    "¿Qué aroma te hace recordar un lugar o una persona?",
+    "¿Qué canción te gustaría escuchar hoy y por qué?"
+  ],
+  "featuredResources": [
+    {
+      "title": "Envejecer con salud y bienestar",
+      "text": "La OMS explica el enfoque de envejecimiento saludable y la importancia de sostener la capacidad para hacer lo que valoramos.",
+      "url": "https://www.who.int/health-topics/ageing/"
+    },
+    {
+      "title": "Conexiones sociales y bienestar",
+      "text": "Información para reconocer la importancia de mantener vínculos y actividades significativas.",
+      "url": "https://www.nia.nih.gov/health/loneliness-and-social-isolation"
+    },
+    {
+      "title": "Prevenir caídas en casa",
+      "text": "Consejos concretos para reducir obstáculos y mejorar la seguridad del hogar.",
+      "url": "https://medlineplus.gov/spanish/ency/patientinstructions/000052.htm"
+    }
+  ],
+  "publishingNote": "Para publicar actualizaciones sin servidor ni backend pago, reemplazá este JSON y/o meditaciones.json en el mismo alojamiento HTTPS de la aplicación. La app consulta los catálogos al abrirse y conserva sus guías incorporadas si no logra conectarse. El contenido cambia cuando quien administra el proyecto publica una nueva versión.",
+  "dailyReflection": "No hace falta resolver todo en un día. Elegí un paso pequeño que te haga bien y date permiso para descansar.",
+  "bedtimeStory": {
+    "title": "La luz de la ventana",
+    "text": "Al caer la tarde, una luz tibia entraba por la ventana. Afuera, los árboles se movían despacito con la brisa. No había nada que resolver en ese instante: solo sentir el apoyo de la cama, escuchar el silencio y dejar que el día terminara. Mañana traería sus propias horas y sus pequeñas posibilidades. Por ahora, alcanzaba con descansar, respirar naturalmente y darse permiso para ir más lento."
+  }
+}

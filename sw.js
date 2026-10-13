@@ -1,4 +1,4 @@
-const CACHE='vida-plena-premium-v5-codigo';
+const CACHE='vida-plena-premium-v5-libre';
 const CORE=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./meditaciones.json','./contenido-vida-plena.json'];
 self.addEventListener('install',event=>{event.waitUntil((async()=>{const cache=await caches.open(CACHE);for(const url of CORE){try{const r=await fetch(url,{cache:'no-store'});if(r.ok)await cache.put(url,r.clone())}catch(e){}}await self.skipWaiting()})())});
 self.addEventListener('activate',event=>{event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k.startsWith('vida-plena-premium-')&&k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim()})())});

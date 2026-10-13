@@ -1,1 +1,25 @@
-{"name": "Vida Plena", "short_name": "Vida Plena", "start_url": "./", "scope": "./", "display": "standalone", "background_color": "#f6f4ed", "theme_color": "#174b46", "lang": "es-AR", "icons": [{"src": "icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}]}
+{
+  "name": "Vida Plena — Tu bienestar, a tu ritmo",
+  "short_name": "Vida Plena",
+  "description": "Herramientas sencillas para el bienestar, la memoria, la organización y la vida cotidiana.",
+  "lang": "es-AR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f4ed",
+  "theme_color": "#174b46",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

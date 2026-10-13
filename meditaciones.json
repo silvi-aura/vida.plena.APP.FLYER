@@ -1,0 +1,164 @@
+{
+  "version": 3,
+  "meditations": [
+    {
+      "id": "meditacion-relajacion-integral",
+      "title": "Meditación guiada para relajar cuerpo y mente",
+      "duration": "5 a 7 minutos",
+      "description": "Una guía completa, cálida y pausada para aflojar tensiones y descansar a tu ritmo.",
+      "steps": [
+        "Hola. Este momento es para vos. Buscá una posición cómoda y segura, sentado o sentada, con la espalda apoyada y los pies descansando en el suelo. Si preferís mantener los ojos abiertos, está perfecto.",
+        "Antes de empezar, recordá que no hay nada que hacer bien ni mal. Si alguna indicación no te resulta cómoda, simplemente salteala. Podés detener esta práctica cuando quieras.",
+        "Llevá la atención a los pies. Notá el contacto con el suelo, la temperatura y el apoyo. No hace falta moverlos ni cambiar nada. Solamente registrá que están ahí, sosteniéndote.",
+        "Ahora prestá atención a las piernas y a la cadera. Permití que el peso descanse sobre la silla. Si encontrás tensión, probá aflojar un poquito, sin empujar ni hacer fuerza.",
+        "Llevá la atención a las manos. Dejá que descansen sobre las piernas o sobre los apoyabrazos. Aflojá los dedos, uno por uno, como si no tuvieran ninguna tarea que cumplir durante estos minutos.",
+        "Ahora observá los hombros. A veces se levantan sin que nos demos cuenta. Si te resulta agradable, dejalos bajar apenas. No hace falta que queden perfectos; alcanza con darles un poco de descanso.",
+        "Notá el rostro. Aflojá la mandíbula si podés, separando apenas los dientes. Suavizá la frente y dejá descansar el contorno de los ojos. Si algo se siente incómodo, volvé a tu posición habitual.",
+        "Vamos a prestar atención a la respiración, sin cambiarla a la fuerza. Notá cómo entra y sale el aire. No hace falta respirar hondo ni contar. Dejá que tu cuerpo encuentre su propio ritmo.",
+        "Imaginá ahora un lugar que te transmita calma: puede ser un patio conocido, una plaza tranquila, un jardín, la orilla del río o cualquier rincón que te haga bien. No necesitás verlo con claridad; alcanza con recordarlo.",
+        "En ese lugar imaginario, observá un detalle amable. Tal vez una luz tibia, el movimiento de las hojas o el sonido suave del agua. Quedate un momento con ese detalle, sin exigirte sentir nada especial.",
+        "Si apareció una preocupación, no hace falta pelearte con ella ni resolverla ahora. Podés decirte: 'Lo voy a atender cuando corresponda. En este momento, me estoy regalando una pausa'. Después, volvé suavemente a la sensación de apoyo.",
+        "Para terminar, sentí nuevamente los pies en el suelo y el cuerpo sostenido por la silla. Mové despacio los dedos de las manos. Mirá alrededor cuando te resulte cómodo y llevate esta idea: puedo ir de a una cosa por vez. Gracias por regalarte este momento."
+      ]
+    },
+    {
+      "id": "respirar",
+      "title": "Respiración tranquila",
+      "duration": "3 minutos",
+      "description": "Una pausa breve para bajar el ritmo, sin retener el aire.",
+      "steps": [
+        "Buscá una postura cómoda y apoyá los pies. Si querés, dejá las manos descansando sobre las piernas.",
+        "Tomá aire suavemente por la nariz, sin llenar los pulmones a la fuerza. Después soltalo despacio, como te salga natural.",
+        "No hace falta contar ni respirar perfecto. Simplemente notá cómo entra el aire y cómo sale.",
+        "Si aparece un pensamiento, no te pelees con él. Dejalo pasar y volvé con amabilidad a tu respiración.",
+        "Aflojá la mandíbula, los hombros y las manos. Hacé una última respiración cómoda y seguí con tu día cuando estés listo o lista."
+      ]
+    },
+    {
+      "id": "relajar",
+      "title": "Relajación paso a paso",
+      "duration": "5 minutos",
+      "description": "Recorrido suave por el cuerpo para descansar sin exigencias.",
+      "steps": [
+        "Acomodate en una silla firme o en un lugar donde estés bien apoyado. Mantené los ojos abiertos si así te sentís mejor.",
+        "Llevá la atención a los pies. No necesitás moverlos: solamente notá cómo están apoyados.",
+        "Subí la atención a las piernas y aflojá cualquier tensión que puedas soltar sin esfuerzo.",
+        "Dejá caer los hombros un poquito. Relajá las manos y separá suavemente los dientes.",
+        "Notá la cara, la frente y alrededor de los ojos. No hace falta cambiar nada: alcanza con darte cuenta.",
+        "Sentí el apoyo de la silla y el contacto de los pies con el suelo. Quedate unos segundos en esa sensación de sostén.",
+        "Cuando quieras, mové suavemente los dedos de las manos y volvé a mirar alrededor. No hay apuro."
+      ]
+    },
+    {
+      "id": "descanso",
+      "title": "Prepararme para descansar",
+      "duration": "4 minutos",
+      "description": "Un cierre sereno para el final del día.",
+      "steps": [
+        "Este ratito es para vos. Acomodate de manera segura y bajá un poco el ritmo.",
+        "No hace falta resolver ahora todo lo que quedó pendiente. Por unos minutos, podés dejarlo para después.",
+        "Respirá naturalmente. Con cada exhalación, imaginá que soltás un poquito de la tensión del día.",
+        "Pensá en algo pequeño que te haya dado alivio, compañía o alegría hoy. Si no se te ocurre nada, está bien también.",
+        "Repetí para vos: hice lo que pude con el día que tuve. Ahora puedo descansar.",
+        "Quedate en silencio unos instantes. Cuando estés preparado o preparada, terminá despacio."
+      ]
+    },
+    {
+      "id": "preocupacion",
+      "title": "Cuando tengo muchas preocupaciones",
+      "duration": "4 minutos",
+      "description": "Una guía amable para hacer una pausa cuando la cabeza no para.",
+      "steps": [
+        "Frená un momento, si estás en un lugar seguro. No tenés que solucionar todo ahora mismo.",
+        "Notá tres cosas que puedas ver a tu alrededor. Después identificá dos sonidos y una sensación física cómoda.",
+        "Respirá de manera natural. Si respirar hondo te incomoda, no lo fuerces: dejá que el cuerpo respire solo.",
+        "Decite con amabilidad: estoy acá, en este momento. Puedo ir de a una cosa por vez.",
+        "Si una preocupación necesita atención, podés anotarla para retomarla más tarde o hablarla con alguien de confianza.",
+        "Sentí los pies apoyados y mirá a tu alrededor. Elegí el próximo paso pequeño, sin exigirte más de la cuenta."
+      ]
+    },
+    {
+      "id": "gratitud",
+      "title": "Reconocer lo bueno de hoy",
+      "duration": "3 minutos",
+      "description": "Un ejercicio de atención a los pequeños momentos valiosos.",
+      "steps": [
+        "Buscá una posición cómoda. No hay una manera correcta de hacer este ejercicio.",
+        "Recordá un momento sencillo de hoy: una charla, una canción, el sol, una comida o un gesto amable.",
+        "Si hoy fue difícil, no tenés que encontrar algo extraordinario. Puede ser simplemente haber llegado hasta este momento.",
+        "Dejá que ese recuerdo esté presente unos segundos, sin obligarte a sentir nada especial.",
+        "Agradecete haber reservado este ratito para vos. Cuando quieras, volvé a tus actividades."
+      ]
+    },
+    {
+      "id": "autocompasion",
+      "title": "Tratarme con cariño",
+      "duration": "3 minutos",
+      "description": "Una pausa para hablarte con la misma amabilidad que ofrecerías a alguien querido.",
+      "steps": [
+        "Acomodate y soltá los hombros si te resulta cómodo.",
+        "Pensá cómo le hablarías a una persona querida que está pasando un día difícil.",
+        "Probá ofrecerte esas mismas palabras: merezco paciencia, puedo pedir ayuda y no tengo que poder con todo.",
+        "Respirá naturalmente y dejá que las palabras se asienten, sin necesidad de creerlas por completo ahora.",
+        "Recordá que pedir compañía o ayuda también es una forma de cuidarte. Terminá cuando te sientas listo o lista."
+      ]
+    },
+    {
+      "id": "pausa-breve",
+      "title": "Pausa de un minuto",
+      "duration": "1 minuto",
+      "description": "Un alto breve para volver al presente.",
+      "steps": [
+        "Si estás en un lugar seguro, frená un momento y apoyá los pies.",
+        "Notá el contacto de tu cuerpo con la silla o el suelo.",
+        "Respirá naturalmente, sin forzar ni retener el aire.",
+        "Mirá a tu alrededor y nombrá mentalmente una cosa que ves.",
+        "Cuando estés listo o lista, seguí con el próximo paso pequeño."
+      ]
+    },
+    {
+      "id": "jardin-calmo",
+      "title": "Imaginar un lugar tranquilo",
+      "duration": "7 minutos",
+      "description": "Una visualización serena que podés adaptar con los ojos abiertos.",
+      "steps": [
+        "Buscá una postura segura y cómoda. Podés mantener los ojos abiertos.",
+        "Imaginá un lugar que te resulte agradable: un jardín, una plaza tranquila, una costa o un patio conocido.",
+        "Pensá en los colores de ese lugar. No hace falta verlo con claridad; alcanza con recordarlo o imaginarlo.",
+        "Imaginá los sonidos suaves que podría haber allí: hojas, viento, pájaros o agua.",
+        "Notá qué sensación cómoda te trae ese lugar. No hace falta sentir nada en particular.",
+        "Si aparecen pensamientos, dejalos pasar y volvé a la imagen con amabilidad.",
+        "Agradecete este momento. Volvé despacio a la habitación, mirando alrededor y moviendo suavemente las manos."
+      ]
+    },
+    {
+      "id": "entre-dias",
+      "title": "Soltar la tensión del día",
+      "duration": "5 minutos",
+      "description": "Pausa guiada de cierre del día, sin exigir que todo esté resuelto.",
+      "steps": [
+        "Acomodate con el cuerpo bien apoyado. Aflojá la mandíbula si te resulta cómodo.",
+        "Recordá que no necesitás resolver todo antes de descansar.",
+        "Observá las manos y dejalas reposar sin esfuerzo.",
+        "Notá los hombros y permití que bajen apenas, sin empujarlos.",
+        "Respirá a tu ritmo. Si enfocarte en la respiración incomoda, elegí un sonido tranquilo del ambiente.",
+        "Pensá qué te gustaría dejar para mañana y, si sirve, anotá una palabra para recordarlo.",
+        "Volvé a sentir los pies en el suelo. Terminá cuando quieras."
+      ]
+    },
+    {
+      "id": "pausa-alegria",
+      "title": "Un pequeño momento agradable",
+      "duration": "3 minutos",
+      "description": "Orientá la atención a una experiencia sencilla que te haga bien.",
+      "steps": [
+        "Tomate unos minutos en un lugar cómodo.",
+        "Recordá una cosa pequeña que te resulte agradable: una canción, una planta, una charla o una comida.",
+        "Prestá atención a un detalle de ese recuerdo.",
+        "Dejá que el recuerdo esté presente sin exigirte sentir felicidad.",
+        "Elegí una pequeña cosa que te gustaría regalarte hoy y retomá tu día a tu ritmo."
+      ]
+    }
+  ],
+  "updatedAt": "2026-10-13"
+}
